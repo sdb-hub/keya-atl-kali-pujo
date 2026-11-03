@@ -30,3 +30,29 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 
 @media(min-width:761px) and (max-width:1000px){.site-header{padding-inline:18px}.nav-link{padding:9px 10px;font-size:12px}.feature-card{gap:11px;padding:15px}.feature-copy strong{font-size:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.donation-track{animation:none}}
+
+
+/* Live donation dashboard */
+.donation-summary-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:16px;max-width:900px;margin:0 auto 16px}
+.donation-stat,.tower-summary-card{border:1px solid #e9b75d88;border-radius:18px;background:linear-gradient(145deg,rgba(9,29,57,.96),rgba(5,17,37,.97));padding:22px;box-shadow:0 12px 30px #0004}
+.donation-stat{display:flex;flex-direction:column;gap:7px}
+.donation-stat>span,.tower-summary-label{font-size:9px;letter-spacing:1.4px;font-weight:700;color:#ffd17a}
+.donation-stat>strong{font:600 clamp(27px,4vw,38px) 'Playfair Display',Georgia,serif;color:#fff}
+.donation-stat>small,.tower-summary-card>small{font-size:11px;color:#c7d1df}
+.donation-stat-total{background:linear-gradient(120deg,rgba(145,25,42,.96),rgba(8,26,53,.98))}
+.tower-summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:900px;margin:0 auto 18px}
+.tower-summary-card{display:flex;flex-direction:column;gap:8px;padding:18px}
+.tower-summary-card>strong{font:600 clamp(20px,3vw,27px) 'Playfair Display',Georgia,serif;color:#fff}
+.donor-panel{max-width:900px}
+.donation-row{grid-template-columns:minmax(65px,.65fr) minmax(0,1.5fr) minmax(90px,.9fr);align-items:center}
+.donation-row strong{overflow-wrap:anywhere}
+@media(max-width:760px){
+  .donation-summary-grid{grid-template-columns:1fr;gap:11px}
+  .donation-stat{padding:18px}
+  .tower-summary-grid{gap:8px}
+  .tower-summary-card{padding:13px 10px;border-radius:14px}
+  .tower-summary-card>strong{font-size:18px}
+  .tower-summary-card>small{font-size:9px;line-height:1.4}
+  .tower-summary-label{font-size:8px}
+  .donation-row{grid-template-columns:60px minmax(0,1fr) 85px;gap:7px;padding:13px 12px;font-size:11px}
+}
