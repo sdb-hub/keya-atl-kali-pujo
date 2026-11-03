@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users,
+  Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users, Utensils,
   ChevronRight, Copy, ExternalLink, ArrowUp, Flame, Heart, Pause, Play
 } from "lucide-react";
 
@@ -10,6 +10,7 @@ const NAV = [
   { id: "donations", label: "Donations" },
   { id: "schedule", label: "Schedule" },
   { id: "sports", label: "Sports" },
+  { id: "community-feast", label: "Community Feast" },
   { id: "about", label: "About Us" }
 ];
 
@@ -18,6 +19,7 @@ const FEATURES = [
   { id: "donations", title: "Donation Details", desc: "See contributions from our community.", Icon: ReceiptText, tone: "blue" },
   { id: "schedule", title: "Schedule", desc: "Puja timings and cultural programmes.", Icon: CalendarDays, tone: "red" },
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
+  { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
   { id: "about", title: "About Us", desc: "Meet the Kali Pujo team and contact us.", Icon: Users, tone: "red", wide: true }
 ];
 
@@ -154,7 +156,7 @@ function App() {
           </article>
         </section>
 
-        <section id="about" className="content-section section-anchor">
+        <section id="community-feast" className="content-section section-anchor">\n          <SectionHeading kicker="COME TOGETHER · SHARE THE JOY" title="Community Feast" subtitle="Be part of our celebration and enjoy a meal together with the community." />\n          <article className="info-card centered-card">\n            <Utensils className="large-card-icon" size={38} />\n            <h3>Community Feast Registration</h3>\n            <p>Registration details and the booking link will be shared here soon.</p>\n            <span className="coming-soon">REGISTRATION LINK TO BE ADDED</span>\n          </article>\n        </section>\n\n        <section id="about" className="content-section section-anchor">
           <SectionHeading kicker="THE PEOPLE BEHIND THE CELEBRATION" title="About Us" subtitle="A community coming together to celebrate Kali Pujo." />
           <article className="info-card centered-card">
             <Users className="large-card-icon" size={38} />
