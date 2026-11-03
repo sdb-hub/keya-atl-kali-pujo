@@ -223,8 +223,8 @@ function App() {
           <article className="info-card centered-card">
             <Trophy className="large-card-icon" size={38} />
             <h3>Sports Registration</h3>
-            <p>Registration details and event categories will be announced here.</p>
-            <span className="coming-soon">REGISTRATION LINK TO BE ADDED</span>
+            <p>Register for the sports and games organised as part of our Kali Pujo celebrations.</p>
+            <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyPg50eRJmwx66oVuOzobVLYWygiiRKHANa2NRiHV6zDU1P6MCLjuvmZMg0X8vTGAE2Gg/exec" target="_blank" rel="noreferrer">Register for Sports <ExternalLink size={16} /></a>
           </article>
         </section>
 
@@ -233,20 +233,46 @@ function App() {
           <article className="info-card centered-card">
             <Utensils className="large-card-icon" size={38} />
             <h3>Community Feast Registration</h3>
-            <p>Registration details and the booking link will be shared here soon.</p>
-            <span className="coming-soon">REGISTRATION LINK TO BE ADDED</span>
+            <p>Book your plates for the community feast and celebrate together.</p>
+            <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyoeaxK7ftt6av0CYAh8TGWgFP4zyjoobvh1XlrRLs1tu98RImk6tGPA7HD-JLmkrw/exec" target="_blank" rel="noreferrer">Register for Community Feast <ExternalLink size={16} /></a>
           </article>
         </section>
 
         <section id="about" className="content-section section-anchor">
           <SectionHeading kicker="THE PEOPLE BEHIND THE CELEBRATION" title="About Us" subtitle="A community coming together to celebrate Kali Pujo." />
-          <article className="info-card centered-card">
+          <article className="info-card team-card">
             <Users className="large-card-icon" size={38} />
-            <h3>Kali Pujo Organising Team</h3>
-            <p>Our organising team details will be published here.</p>
-            <span className="coming-soon">TEAM MEMBERS TO BE ADDED</span>
+            <h3>Team KaliPujo</h3>
+            <div className="team-grid">
+              <div className="team-member">Soumalya Das</div>
+              <div className="team-member">Sonam Agnihotri</div>
+              <div className="team-member">Shatam Bhattacharyya</div>
+              <div className="team-member">Ritika Dey</div>
+              <div className="team-member">Prateek Sadhukhan</div>
+              <div className="team-member">Poulomi Mukherjee</div>
+              <div className="team-member">Rwitam Mitra</div>
+              <div className="team-member">Swaagata Chowdhury</div>
+              <div className="team-member">Soumyadip Basu</div>
+              <div className="team-member">Asmita Biswas</div>
+              <div className="team-member">Yoghesh Dakshinamoorthy</div>
+              <div className="team-member">Ivani Konar</div>
+              <div className="team-member">Dipayan Dev</div>
+              <div className="team-member">Subrat Panda</div>
+              <div className="team-member">Priyanka Ghosh</div>
+              <div className="team-member">Abhishek Pal</div>
+              <div className="team-member">Subhasis Deb</div>
+              <div className="team-member">Shamim md</div>
+              <div className="team-member">Nadira Parveen</div>
+              <div className="team-member">Siddhartha Pathak</div>
+              <div className="team-member">Moutushi Saha</div>
+              <div className="team-member">Arpa Banerjee</div>
+              <div className="team-member">Aakash</div>
+            </div>
           </article>
-          <div className="contact-strip"><Heart size={18} /> For queries, committee contact details will be shared here.</div>
+          <div className="contact-strip contact-strip-stack">
+            <Heart size={18} />
+            <div><strong>For any queries, please contact:</strong><br /><a href="tel:9477559166">Prateek – 9477559166</a><span> · </span><a href="tel:7686041496">Soumyadip – 7686041496</a></div>
+          </div>
         </section>
       </main>
 
