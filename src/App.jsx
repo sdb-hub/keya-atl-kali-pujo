@@ -114,7 +114,6 @@ function App() {
           <div className="contributor-grid">
             <article className="info-card contributor-card">
               <h3>Soumalya Das</h3>
-              <img className="contributor-qr" src="/images/qr-soumalya-das.jpeg.JPG" alt="Soumalya Das UPI QR code" />
               <div className="contributor-details">
                 <div><span>Phone</span><strong>9734523975</strong></div>
                 <div><span>UPI ID</span><strong>dassoumalyadas-2@okhdfcbank</strong></div>
@@ -123,7 +122,6 @@ function App() {
             </article>
             <article className="info-card contributor-card">
               <h3>Prateek Sadhukhan</h3>
-              <img className="contributor-qr" src="/images/qr-prateek-sadhukhan.jpeg.JPG" alt="Prateek Sadhukhan UPI QR code" />
               <div className="contributor-details">
                 <div><span>Phone</span><strong>9477559166</strong></div>
                 <div><span>UPI ID</span><strong>prateek.sadhukhan4-1@oksbi</strong></div>
@@ -132,7 +130,6 @@ function App() {
             </article>
             <article className="info-card contributor-card">
               <h3>Soumyadip Basu</h3>
-              <img className="contributor-qr" src="/images/qr-soumyadip-basu.jpeg.JPG" alt="Soumyadip Basu PhonePe QR code" />
               <div className="contributor-details">
                 <div><span>Phone</span><strong>7686041496</strong></div>
                 <div><span>UPI ID</span><strong>7686041496@ybl</strong></div>
@@ -140,7 +137,7 @@ function App() {
               </div>
             </article>
           </div>
-          <p className="section-note">Scan the QR code or copy the UPI ID to contribute. Please verify the recipient name before completing your payment.</p>
+          <p className="section-note">Use the UPI ID to contribute. Please verify the recipient name before completing your payment.</p>
         </section>
 
         <section id="donations" className="content-section section-anchor">
