@@ -18,6 +18,7 @@ async function handleDonations(env) {
     if (upstreamUrl.protocol !== "https:" || upstreamUrl.hostname !== "script.google.com") {
       return jsonResponse({ configured: false, error: "Donation source URL is invalid." }, 500);
     }
+    upstreamUrl.searchParams.set("page", "publicDonations");
     upstreamUrl.searchParams.set("token", token);
     const upstream = await fetch(upstreamUrl.toString(), {
       method: "GET",
