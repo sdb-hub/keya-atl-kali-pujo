@@ -231,7 +231,17 @@ function App() {
           </article>
         </section>
 
-        <section id="community-feast" className="content-section section-anchor">\n          <SectionHeading kicker="COME TOGETHER · SHARE THE JOY" title="Community Feast" subtitle="Be part of our celebration and enjoy a meal together with the community." />\n          <article className="info-card centered-card">\n            <Utensils className="large-card-icon" size={38} />\n            <h3>Community Feast Registration</h3>\n            <p>Registration details and the booking link will be shared here soon.</p>\n            <span className="coming-soon">REGISTRATION LINK TO BE ADDED</span>\n          </article>\n        </section>\n\n        <section id="about" className="content-section section-anchor">
+        <section id="community-feast" className="content-section section-anchor">
+          <SectionHeading kicker="COME TOGETHER · SHARE THE JOY" title="Community Feast" subtitle="Be part of our celebration and enjoy a meal together with the community." />
+          <article className="info-card centered-card">
+            <Utensils className="large-card-icon" size={38} />
+            <h3>Community Feast Registration</h3>
+            <p>Registration details and the booking link will be shared here soon.</p>
+            <span className="coming-soon">REGISTRATION LINK TO BE ADDED</span>
+          </article>
+        </section>
+
+        <section id="about" className="content-section section-anchor">
           <SectionHeading kicker="THE PEOPLE BEHIND THE CELEBRATION" title="About Us" subtitle="A community coming together to celebrate Kali Pujo." />
           <article className="info-card centered-card">
             <Users className="large-card-icon" size={38} />
