@@ -20,7 +20,7 @@ const FEATURES = [
   { id: "schedule", title: "Schedule", desc: "Puja timings and cultural programmes.", Icon: CalendarDays, tone: "red" },
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
   { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
-  { id: "about", title: "About Us", desc: "Meet the Kali Pujo team and contact us.", Icon: Users, tone: "red", wide: true }
+  { id: "about", title: "About Us", desc: "Meet the Kali Pujo team and contact us.", Icon: Users, tone: "blue", wide: true }
 ];
 
 function App() {
@@ -74,9 +74,6 @@ function App() {
   return (
     <>
       <header className="site-header">
-        <button className="brand" onClick={() => goTo("home")} aria-label="Go to home">
-          <span className="brand-lamp">🪔</span><span>Keya ATL <b>Kali Pujo 2026</b></span>
-        </button>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle navigation">
           {menuOpen ? <X /> : <Menu />}
         </button>
