@@ -111,18 +111,36 @@ function App() {
 
         <section id="contribute" className="content-section section-anchor">
           <SectionHeading kicker="BE A PART OF THE CELEBRATION" title="Contribute" subtitle="Your support helps bring our community celebration to life." />
-          <div className="tower-grid">
-            {["A", "B", "C"].map((tower) => (
-              <article className="info-card tower-card" key={tower}>
-                <div className="tower-mark">TOWER {tower}</div>
-                <h3>Tower {tower}</h3>
-                <p>Scan the tower QR code or use the UPI ID to contribute.</p>
-                <div className="qr-placeholder">QR code<br /><small>To be added</small></div>
-                <div className="upi-line"><span>UPI ID will be added</span><button disabled aria-label="Copy UPI ID"><Copy size={16} /></button></div>
-              </article>
-            ))}
+          <div className="contributor-grid">
+            <article className="info-card contributor-card">
+              <h3>Soumalya Das</h3>
+              <img className="contributor-qr" src="/images/qr-soumalya-das.jpeg" alt="Soumalya Das UPI QR code" />
+              <div className="contributor-details">
+                <div><span>Phone</span><strong>9734523975</strong></div>
+                <div><span>UPI ID</span><strong>dassoumalyadas-2@okhdfcbank</strong></div>
+                <button className="copy-upi" onClick={() => copyText("dassoumalyadas-2@okhdfcbank")}><Copy size={15} /> Copy UPI ID</button>
+              </div>
+            </article>
+            <article className="info-card contributor-card">
+              <h3>Prateek Sadhukhan</h3>
+              <img className="contributor-qr" src="/images/qr-prateek-sadhukhan.jpeg" alt="Prateek Sadhukhan UPI QR code" />
+              <div className="contributor-details">
+                <div><span>Phone</span><strong>9477559166</strong></div>
+                <div><span>UPI ID</span><strong>prateek.sadhukhan4-1@oksbi</strong></div>
+                <button className="copy-upi" onClick={() => copyText("prateek.sadhukhan4-1@oksbi")}><Copy size={15} /> Copy UPI ID</button>
+              </div>
+            </article>
+            <article className="info-card contributor-card">
+              <h3>Soumyadip Basu</h3>
+              <img className="contributor-qr" src="/images/qr-soumyadip-basu.jpeg" alt="Soumyadip Basu PhonePe QR code" />
+              <div className="contributor-details">
+                <div><span>Phone</span><strong>7686041496</strong></div>
+                <div><span>UPI ID</span><strong>7686041496@ybl</strong></div>
+                <button className="copy-upi" onClick={() => copyText("7686041496@ybl")}><Copy size={15} /> Copy UPI ID</button>
+              </div>
+            </article>
           </div>
-          <p className="section-note">Please verify the recipient name before completing your UPI payment.</p>
+          <p className="section-note">Scan the QR code or copy the UPI ID to contribute. Please verify the recipient name before completing your payment.</p>
         </section>
 
         <section id="donations" className="content-section section-anchor">
