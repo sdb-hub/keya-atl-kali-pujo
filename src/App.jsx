@@ -27,6 +27,7 @@ function App() {
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [donations, setDonations] = useState([]);
+  const [donationSummary, setDonationSummary] = useState({ total: 0, flatCount: 0, towers: [] });
   const [donationStatus, setDonationStatus] = useState("loading");
   const [paused, setPaused] = useState(false);
 
@@ -55,7 +56,12 @@ function App() {
         const data = await response.json();
         if (alive) {
           setDonations(Array.isArray(data.donations) ? data.donations : []);
-          setDonationStatus("ready");
+          setDonationSummary({
+            total: Number(data.total) || 0,
+            flatCount: Number(data.flatCount) || 0,
+            towers: Array.isArray(data.towers) ? data.towers : []
+          });
+          setDonationStatus(data.configured === false ? "unavailable" : "ready");
         }
       } catch {
         if (alive) setDonationStatus("unavailable");
@@ -121,16 +127,70 @@ function App() {
 
         <section id="donations" className="content-section section-anchor">
           <SectionHeading kicker="OUR COMMUNITY, OUR CONTRIBUTION" title="Donation Details" subtitle="Thank you to every household supporting Kali Pujo." />
-          <div className="donation-panel">
-            <div className="panel-top"><div><span className="live-dot" /> COMMUNITY CONTRIBUTIONS</div><button className="pause-button" onClick={() => setPaused(!paused)}>{paused ? <Play size={15} /> : <Pause size={15} />}{paused ? "Resume" : "Pause"}</button></div>
-            {donationStatus === "loading" && <p className="empty-state">Loading published contributions…</p>}
-            {donationStatus === "unavailable" && <p className="empty-state">The public donation list will appear here once the secure read-only connection is configured.</p>}
-            {donationStatus === "ready" && donations.length === 0 && <p className="empty-state">No public contributions have been published yet.</p>}
-            {donations.length > 0 && <div className={paused ? "donation-scroll paused" : "donation-scroll"}><div className="donation-track">
-              {[...donations, ...donations].map((item, index) => <div className="donation-row" key={`${item.flat}-${index}`}><span>{item.flat}</span><strong>{item.name}</strong><b>₹{Number(item.amount).toLocaleString("en-IN")}</b></div>)}
-            </div></div>}
-            <div className="panel-foot">Updates automatically every 5 minutes</div>
-          </div>
+
+          {donationStatus === "loading" && (
+            <div className="donation-panel"><p className="empty-state">Loading live contributions…</p></div>
+          )}
+
+          {donationStatus === "unavailable" && (
+            <div className="donation-panel"><p className="empty-state">Donation details are temporarily unavailable. Please check back shortly.</p></div>
+          )}
+
+          {donationStatus === "ready" && (
+            <>
+              <div className="donation-summary-grid">
+                <article className="donation-stat donation-stat-total">
+                  <span>TOTAL CONTRIBUTIONS</span>
+                  <strong>₹{donationSummary.total.toLocaleString("en-IN", { maximumFractionDigits: 2 })}</strong>
+                  <small>Across all towers</small>
+                </article>
+                <article className="donation-stat">
+                  <span>CONTRIBUTING HOUSEHOLDS</span>
+                  <strong>{donationSummary.flatCount.toLocaleString("en-IN")}</strong>
+                  <small>Unique contributing flats</small>
+                </article>
+              </div>
+
+              <div className="tower-summary-grid">
+                {["A", "B", "C"].map((tower) => {
+                  const item = donationSummary.towers.find((entry) => entry.tower === tower) || { total: 0, flatCount: 0 };
+                  return (
+                    <article className="tower-summary-card" key={tower}>
+                      <span className="tower-summary-label">TOWER {tower}</span>
+                      <strong>₹{Number(item.total).toLocaleString("en-IN", { maximumFractionDigits: 2 })}</strong>
+                      <small>{Number(item.flatCount).toLocaleString("en-IN")} contributing {Number(item.flatCount) === 1 ? "flat" : "flats"}</small>
+                    </article>
+                  );
+                })}
+              </div>
+
+              <div className="donation-panel donor-panel">
+                <div className="panel-top">
+                  <div><span className="live-dot" /> HOUSEHOLD CONTRIBUTIONS</div>
+                  <button className="pause-button" onClick={() => setPaused(!paused)}>
+                    {paused ? <Play size={15} /> : <Pause size={15} />}
+                    {paused ? "Resume" : "Pause"}
+                  </button>
+                </div>
+                {donations.length === 0 ? (
+                  <p className="empty-state">No public contributions have been recorded yet.</p>
+                ) : (
+                  <div className={paused ? "donation-scroll paused" : "donation-scroll"}>
+                    <div className="donation-track">
+                      {[...donations, ...donations].map((item, index) => (
+                        <div className="donation-row" key={`${item.flat}-${index}`}>
+                          <span>{item.flat}</span>
+                          <strong>{item.name}</strong>
+                          <b>₹{Number(item.amount).toLocaleString("en-IN", { maximumFractionDigits: 2 })}</b>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                <div className="panel-foot">Live data · Automatically refreshed every 5 minutes</div>
+              </div>
+            </>
+          )}
         </section>
 
         <section id="schedule" className="content-section section-anchor">
