@@ -139,3 +139,17 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   #donations .tower-summary-label{font-size:8px}
   #donations .donation-scroll{height:320px}
 }
+
+/* Individual contribution QR cards */
+.contributor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch}
+.contributor-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:22px}
+.contributor-card h3{margin:2px 0 0}
+.contributor-qr{display:block;width:100%;max-width:290px;height:auto;object-fit:contain;background:#fff;border-radius:12px}
+.contributor-details{width:100%;display:flex;flex-direction:column;gap:12px;text-align:left}
+.contributor-details>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.contributor-details span{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#ffd17a;font-weight:700}
+.contributor-details strong{font-size:13px;color:#fff;overflow-wrap:anywhere}
+.copy-upi{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:11px 14px;border:1px solid #efbd62;border-radius:10px;background:#d92d3a;color:#fff;font-weight:700;font-size:12px;cursor:pointer}
+.copy-upi:hover{background:#b91f30}
+@media(max-width:900px){.contributor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.contributor-grid{grid-template-columns:1fr;gap:14px}.contributor-card{padding:18px}.contributor-qr{max-width:320px}}
