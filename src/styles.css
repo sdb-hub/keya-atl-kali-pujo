@@ -153,3 +153,16 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 .copy-upi:hover{background:#b91f30}
 @media(max-width:900px){.contributor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.contributor-grid{grid-template-columns:1fr;gap:14px}.contributor-card{padding:18px}.contributor-qr{max-width:320px}}
+
+
+/* Registration links and organising team */
+.registration-link{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-top:14px;padding:12px 20px;border:1px solid #efbd62;border-radius:30px;background:#d92d3a;color:#fff;text-decoration:none;font-size:12px;font-weight:700;transition:background .18s,transform .18s}
+.registration-link:hover{background:#b91f30;transform:translateY(-2px)}
+.team-card{max-width:900px;margin:0 auto;text-align:center}
+.team-card h3{margin:12px 0 22px}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.team-member{padding:11px 12px;border:1px solid #e9b75d55;border-radius:11px;background:#ffffff08;color:#f3f5fa;font-size:13px;text-align:center}
+.contact-strip-stack{max-width:900px;line-height:1.8}
+.contact-strip-stack a{color:#ffd17a;text-decoration:none;font-weight:700;white-space:nowrap}
+.contact-strip-stack a:hover{text-decoration:underline}
+@media(max-width:760px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.team-member{font-size:12px;padding:10px 7px}.contact-strip-stack{align-items:flex-start;line-height:1.9}}
