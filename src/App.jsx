@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users, Utensils, Mail, ShoppingBag,
-  ChevronRight, Copy, ExternalLink, ArrowUp, Flame, Heart, Pause, Play, Search
+  ChevronRight, Copy, ExternalLink, ArrowUp, Flame, Heart, Pause, Play, Search, Music2, Drama, Guitar
 } from "lucide-react";
 
 const NAV = [
@@ -19,9 +19,9 @@ const NAV = [
 
 const FEATURES = [
   { id: "schedule", title: "Schedule", desc: "Puja timings and cultural programmes.", Icon: CalendarDays, tone: "red" },
-  { id: "keya-kalakriti", title: "Keya Kalakriti", desc: "A cultural competition.", image: "/images/Kalakriti.jpg", tone: "blue", event: true },
-  { id: "tarangaa", title: "Tarangaa", desc: "The Kali Chronicles in Keya.", image: "/images/Tarangaa.jpg", tone: "red", event: true },
-  { id: "bongolorean-live", title: "Bongolorean Live", desc: "Live music and performances.", image: "/images/Bongolorean.jpg", tone: "blue", event: true },
+  { id: "keya-kalakriti", title: "Keya Kalakriti", desc: "A cultural competition.", Icon: Music2, tone: "blue", event: true },
+  { id: "tarangaa", title: "Tarangaa", desc: "The Kali Chronicles in Keya.", Icon: Drama, tone: "red", event: true },
+  { id: "bongolorean-live", title: "Bongolorean Live", desc: "Live music and performances.", Icon: Guitar, tone: "blue", event: true },
   { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
   { id: "flea-market", title: "Flea Markets", desc: "Explore the stalls at our community flea market.", Icon: ShoppingBag, tone: "red" },
@@ -114,9 +114,9 @@ function App() {
               </button>
             </div>
             <div className="feature-grid">
-              {FEATURES.map(({ id, title, desc, Icon, image, tone, event }) => (
+              {FEATURES.map(({ id, title, desc, Icon, tone, event }) => (
                 <button key={id} className={`feature-card ${tone} ${event ? "event-feature-card" : ""}`} onClick={() => goTo(id)}>
-                  {image ? <img className="event-feature-image" src={image} alt="" /> : <span className="feature-icon"><Icon size={27} strokeWidth={1.8} /></span>}
+                  <span className="feature-icon"><Icon size={27} strokeWidth={1.8} /></span>
                   <span className="feature-copy"><strong>{title}</strong><small>{desc}</small></span>
                   <span className="feature-arrow"><ChevronRight size={19} /></span>
                 </button>
