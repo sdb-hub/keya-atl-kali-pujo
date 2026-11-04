@@ -11,6 +11,7 @@ const NAV = [
   { id: "schedule", label: "Schedule" },
   { id: "sports", label: "Sports" },
   { id: "community-feast", label: "Community Feast" },
+  { id: "sponsors", label: "Our Sponsors" },
   { id: "about", label: "About Us" }
 ];
 
@@ -20,6 +21,7 @@ const FEATURES = [
   { id: "schedule", title: "Schedule", desc: "Puja timings and cultural programmes.", Icon: CalendarDays, tone: "red" },
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
   { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
+  { id: "sponsors", title: "Our Sponsors", desc: "Thank you to our celebration partners.", Icon: Heart, tone: "blue" },
   { id: "about", title: "About Us", desc: "Meet the Kali Pujo team and contact us.", Icon: Users, tone: "blue", wide: true }
 ];
 
@@ -301,6 +303,39 @@ function App() {
             <p>Book your plates for the community feast and celebrate together.</p>
             <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyoeaxK7ftt6av0CYAh8TGWgFP4zyjoobvh1XlrRLs1tu98RImk6tGPA7HD-JLmkrw/exec" target="_blank" rel="noreferrer">Register for Community Feast <ExternalLink size={16} /></a>
           </article>
+        </section>
+
+        <section id="sponsors" className="content-section section-anchor">
+          <SectionHeading kicker="WITH GRATITUDE" title="Our Sponsors" subtitle="Thank you to our sponsors for supporting the Keya ATL Kali Pujo 2026 celebrations." />
+          <div className="sponsor-grid">
+            <article className="sponsor-card cahoot-sponsor">
+              <div className="cahoot-logos">
+                <img src="/images/Cahootlogo.jpg" alt="Cahoot symbol" />
+                <img src="/images/Cahoot.jpg" alt="Cahoot wordmark" />
+              </div>
+              <h3>Cahoot</h3>
+            </article>
+            <article className="sponsor-card">
+              <img src="/images/Cabbo.jpg" alt="Cabbo logo" />
+              <h3>Cabbo</h3>
+            </article>
+            <article className="sponsor-card">
+              <img src="/images/Taraash.jpg" alt="Taraash Interiors logo" />
+              <h3>Taraash Interiors</h3>
+            </article>
+            <article className="sponsor-card">
+              <img src="/images/faabro.jpg" alt="FaabrCare logo" />
+              <h3>FaabrCare</h3>
+            </article>
+            <article className="sponsor-card">
+              <img src="/images/Ayoniz.png" alt="Ayoniz International Preschool logo" />
+              <h3>Ayoniz International Preschool</h3>
+            </article>
+            <article className="sponsor-card">
+              <img src="/images/Simplyfyspaces.jpg" alt="Simplyfyspaces logo" />
+              <h3>Simplyfyspaces</h3>
+            </article>
+          </div>
         </section>
 
         <section id="about" className="content-section section-anchor">
