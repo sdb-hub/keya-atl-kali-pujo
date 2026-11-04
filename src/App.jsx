@@ -392,6 +392,7 @@ function App() {
               <div className="team-member">Subrat Panda</div>
               <div className="team-member">Priyanka Ghosh</div>
               <div className="team-member">Abhishek Pal</div>
+              <div className="team-member">Satrajit Nath</div>
               <div className="team-member">Subhasis Deb</div>
               <div className="team-member">Shamim md</div>
               <div className="team-member">Nadira Parveen</div>
