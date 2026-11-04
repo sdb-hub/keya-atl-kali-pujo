@@ -15,7 +15,9 @@ const NAV = [
   { id: "sponsors", label: "Our Sponsors" },
   { id: "about", label: "About Us" },
   { id: "contact", label: "Get in Touch" }
-]const FEATURES = [
+];
+
+const FEATURES = [
   { id: "schedule", title: "Schedule", desc: "Puja timings and cultural programmes.", Icon: CalendarDays, tone: "red" },
   { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "blue" },
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "red" },
@@ -24,7 +26,6 @@ const NAV = [
   { id: "sponsors", title: "Our Sponsors", desc: "Thank you to our celebration partners.", Icon: Heart, tone: "blue" },
   { id: "about", title: "About Us", desc: "Meet the team behind the celebration.", Icon: Users, tone: "red" },
   { id: "contact", title: "Get in Touch", desc: "Get in touch with the organising team.", Icon: Mail, tone: "blue" }
-];
 ];
 
 function App() {
