@@ -229,7 +229,7 @@ function App() {
                 <ScheduleEvent time="4:30 PM – 6:30 PM" title="Keya Kalakriti" detail="A Cultural Competition" />
                 <ScheduleEvent time="7:00 PM – 8:00 PM" title="Aarti + Dhunuchi" />
                 <ScheduleEvent time="8:00 PM – 8:30 PM" title="Traditional Dhak Performance" />
-                <ScheduleEvent time="8:30 PM – 10:00 PM" title="Community Feast" />
+                <ScheduleEvent time="7:30 PM – 10:00 PM" title="Community Feast" />
               </div>
             </article>
             <article className="schedule-card">
