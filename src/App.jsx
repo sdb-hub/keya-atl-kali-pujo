@@ -19,7 +19,10 @@ const NAV = [
 
 const FEATURES = [
   { id: "schedule", title: "Schedule", desc: "Puja timings and cultural programmes.", Icon: CalendarDays, tone: "red" },
-  { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "blue" },
+  { id: "keya-kalakriti", title: "Keya Kalakriti", desc: "A cultural competition.", image: "/images/Kalakriti.jpg", tone: "blue", event: true },
+  { id: "tarangaa", title: "Tarangaa", desc: "The Kali Chronicles in Keya.", image: "/images/Tarangaa.jpg", tone: "red", event: true },
+  { id: "bongolorean-live", title: "Bongolorean Live", desc: "Live music and performances.", image: "/images/Bongolorean.jpg", tone: "blue", event: true },
+  { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "red" },
   { id: "flea-market", title: "Flea Markets", desc: "Explore the stalls at our community flea market.", Icon: ShoppingBag, tone: "blue" },
   { id: "donations", title: "Donation Details", desc: "See contributions from our community.", Icon: ReceiptText, tone: "red" },
@@ -111,9 +114,9 @@ function App() {
               </button>
             </div>
             <div className="feature-grid">
-              {FEATURES.map(({ id, title, desc, Icon, tone }) => (
-                <button key={id} className={`feature-card ${tone}`} onClick={() => goTo(id)}>
-                  <span className="feature-icon"><Icon size={27} strokeWidth={1.8} /></span>
+              {FEATURES.map(({ id, title, desc, Icon, image, tone, event }) => (
+                <button key={id} className={`feature-card ${tone} ${event ? "event-feature-card" : ""}`} onClick={() => goTo(id)}>
+                  {image ? <img className="event-feature-image" src={image} alt="" /> : <span className="feature-icon"><Icon size={27} strokeWidth={1.8} /></span>}
                   <span className="feature-copy"><strong>{title}</strong><small>{desc}</small></span>
                   <span className="feature-arrow"><ChevronRight size={19} /></span>
                 </button>
@@ -307,6 +310,21 @@ function App() {
             </div>
             <p style={{ textAlign: "center", margin: "16px 0 0", opacity: 0.8 }}>Video showcasing our flea market stalls</p>
           </article>
+        </section>
+
+        <section id="keya-kalakriti" className="content-section section-anchor event-poster-section">
+          <SectionHeading kicker="CULTURE · CREATIVITY · COMMUNITY" title="Keya Kalakriti" subtitle="A cultural competition celebrating the talents of our community." />
+          <img className="event-poster-image" src="/images/Kalakriti.jpg" alt="Keya Kalakriti event poster" />
+        </section>
+
+        <section id="tarangaa" className="content-section section-anchor event-poster-section">
+          <SectionHeading kicker="THE KALI CHRONICLES IN KEYA" title="Tarangaa" subtitle="Join us for Tarangaa, a special cultural presentation." />
+          <img className="event-poster-image" src="/images/Tarangaa.jpg" alt="Tarangaa event poster" />
+        </section>
+
+        <section id="bongolorean-live" className="content-section section-anchor event-poster-section">
+          <SectionHeading kicker="MUSIC · ENERGY · CELEBRATION" title="Bongolorean Live" subtitle="Get ready for a live musical celebration." />
+          <img className="event-poster-image" src="/images/Bongolorean.jpg" alt="Bongolorean Live event poster" />
         </section>
 
         <section id="sports" className="content-section section-anchor">
