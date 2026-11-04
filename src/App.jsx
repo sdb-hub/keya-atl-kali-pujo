@@ -225,7 +225,8 @@ function App() {
               <div className="schedule-card-heading"><span>09</span><div><h3>9th November</h3><p>Monday</p></div></div>
               <div className="schedule-events">
                 <ScheduleEvent time="11:00 AM – 10:30 PM" title="Flea Market" />
-                <ScheduleEvent time="12:00 PM – 4:00 PM" title="Sports" />
+                <ScheduleEvent time="10:00 AM – 12:00 PM" title="Sports" />
+                <ScheduleEvent time="2:00 PM – 4:00 PM" title="Sports" />
                 <ScheduleEvent time="4:30 PM – 6:30 PM" title="Keya Kalakriti" detail="A Cultural Competition" />
                 <ScheduleEvent time="7:00 PM – 8:00 PM" title="Aarti + Dhunuchi" />
                 <ScheduleEvent time="8:00 PM – 8:30 PM" title="Traditional Dhak Performance" />
