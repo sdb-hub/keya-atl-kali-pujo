@@ -213,6 +213,7 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 #donations .donation-row{grid-template-columns:minmax(0,1fr) minmax(90px,.7fr)!important;align-items:center}
 #donations .donation-row>b{text-align:right;color:#ff7775}
 #donations .team-card-title{color:#ffd17a}
+.team-card .team-card-title{color:#ffd17a}
 .contact-card{max-width:680px;margin:0 auto;text-align:center}
 .contact-card h3{margin:12px 0 20px;color:#ffd17a}
 .contact-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
