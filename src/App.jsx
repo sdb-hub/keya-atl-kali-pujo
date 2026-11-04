@@ -310,7 +310,7 @@ function App() {
           <div className="sponsor-board-wrap">
             <img
               className="sponsor-board-image"
-              src="/images/sponsors.png"
+              src="/images/sponsors-transparent.png"
               alt="Keya ATL Kali Pujo 2026 sponsors"
             />
           </div>
