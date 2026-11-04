@@ -39,6 +39,7 @@ function App() {
   const [donationStatus, setDonationStatus] = useState("loading");
   const [paused, setPaused] = useState(false);
   const [flatSearch, setFlatSearch] = useState("");
+  const [fleaVideoOpen, setFleaVideoOpen] = useState(false);
 
   const goTo = (id) => {
     setActive(id);
@@ -298,18 +299,29 @@ function App() {
 
         <section id="flea-market" className="content-section section-anchor">
           <SectionHeading kicker="EXPLORE · SHOP · SUPPORT LOCAL" title="Flea Market Stalls" subtitle="Take a look at the stalls and discover what our community flea market has to offer." />
-          <article className="info-card" style={{ maxWidth: "1000px", margin: "0 auto", padding: "clamp(16px, 3vw, 28px)" }}>
-            <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "14px", background: "#160d12" }}>
-              <iframe
-                src="https://drive.google.com/file/d/1S0PcW6cfvC40B5QHhntIqbaqHune5EGb/preview"
-                title="Keya ATL Kali Pujo 2026 Flea Market Stalls"
-                allow="autoplay"
-                allowFullScreen
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-              />
-            </div>
-            <p style={{ textAlign: "center", margin: "16px 0 0", opacity: 0.8 }}>Video showcasing our flea market stalls</p>
+          <article className="info-card flea-video-card">
+            <button className="flea-video-launch" onClick={() => setFleaVideoOpen(true)} aria-label="Play flea market stalls video">
+              <span className="flea-video-play"><Play size={30} fill="currentColor" /></span>
+              <strong>Explore Our Flea Market Stalls</strong>
+              <small>Click to play video</small>
+            </button>
+            <p className="flea-video-caption">Watch the video showcasing our flea market stalls</p>
           </article>
+          {fleaVideoOpen && (
+            <div className="flea-video-modal" role="dialog" aria-modal="true" aria-label="Flea Market Stalls video" onClick={() => setFleaVideoOpen(false)}>
+              <div className="flea-video-modal-content" onClick={(event) => event.stopPropagation()}>
+                <button className="flea-video-close" onClick={() => setFleaVideoOpen(false)} aria-label="Close video"><X size={23} /></button>
+                <div className="flea-video-player">
+                  <iframe
+                    src="https://drive.google.com/file/d/1S0PcW6cfvC40B5QHhntIqbaqHune5EGb/preview"
+                    title="Keya ATL Kali Pujo 2026 Flea Market Stalls"
+                    allow="autoplay; fullscreen"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          )}
         </section>
 
         <section id="keya-kalakriti" className="content-section section-anchor event-poster-section">
