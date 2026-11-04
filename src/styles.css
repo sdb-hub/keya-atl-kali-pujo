@@ -203,6 +203,7 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 @media(max-width:760px){.donation-search{margin:12px;padding:10px 11px}.donation-search input{font-size:12px}.donation-results .donation-row{grid-template-columns:60px minmax(0,1fr) 85px;gap:7px;padding:13px 12px;font-size:11px}}
 
 /* Sponsor showcase */
-.sponsor-board-wrap{width:100%;max-width:1120px;margin:0 auto}
-.sponsor-board-image{display:block;width:100%;height:auto;object-fit:contain;border-radius:16px;box-shadow:0 18px 42px #0004}
-@media(max-width:520px){.sponsor-board-image{border-radius:10px}}
+#sponsors{width:min(calc(100% - 36px),1120px);max-width:100%;min-width:0;overflow:hidden}
+#sponsors .sponsor-board-wrap{display:block;width:100%;max-width:100%;min-width:0;margin:0 auto;overflow:hidden}
+#sponsors .sponsor-board-image{display:block;width:100%!important;max-width:100%!important;min-width:0;height:auto!important;max-height:none;object-fit:contain;border-radius:16px;box-shadow:0 18px 42px #0004}
+@media(max-width:760px){#sponsors{width:calc(100% - 28px);padding-left:0;padding-right:0}#sponsors .sponsor-board-wrap{width:100%;max-width:100%}#sponsors .sponsor-board-image{width:100%!important;max-width:100%!important;height:auto!important;border-radius:10px}}
