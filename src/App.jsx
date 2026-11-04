@@ -7,26 +7,24 @@ import {
 const NAV = [
   { id: "home", label: "Home" },
   { id: "contribute", label: "Contribute" },
-  { id: "donations", label: "Donations" },
   { id: "schedule", label: "Schedule" },
-  { id: "flea-market", label: "Flea Market Stalls" },
-  { id: "sports", label: "Sports" },
   { id: "community-feast", label: "Community Feast" },
+  { id: "sports", label: "Sports" },
+  { id: "flea-market", label: "Flea Markets" },
+  { id: "donations", label: "Donation Details" },
   { id: "sponsors", label: "Our Sponsors" },
   { id: "about", label: "About Us" },
-  { id: "contact", label: "Contact Us" }
-];
-
-const FEATURES = [
-  { id: "contribute", title: "Contribute", desc: "Support the celebration with a contribution.", Icon: HandHeart, tone: "red" },
-  { id: "donations", title: "Donation Details", desc: "See contributions from our community.", Icon: ReceiptText, tone: "blue" },
+  { id: "contact", label: "Get in Touch" }
+]const FEATURES = [
   { id: "schedule", title: "Schedule", desc: "Puja timings and cultural programmes.", Icon: CalendarDays, tone: "red" },
-  { id: "flea-market", title: "Flea Market Stalls", desc: "Explore the stalls at our community flea market.", Icon: ShoppingBag, tone: "blue" },
-  { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
-  { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
+  { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "blue" },
+  { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "red" },
+  { id: "flea-market", title: "Flea Markets", desc: "Explore the stalls at our community flea market.", Icon: ShoppingBag, tone: "blue" },
+  { id: "donations", title: "Donation Details", desc: "See contributions from our community.", Icon: ReceiptText, tone: "red" },
   { id: "sponsors", title: "Our Sponsors", desc: "Thank you to our celebration partners.", Icon: Heart, tone: "blue" },
-  { id: "about", title: "About Us", desc: "Meet the team behind the celebration.", Icon: Users, tone: "blue", wide: true },
-  { id: "contact", title: "Contact Us", desc: "Get in touch with the organising team.", Icon: Mail, tone: "red" }
+  { id: "about", title: "About Us", desc: "Meet the team behind the celebration.", Icon: Users, tone: "red" },
+  { id: "contact", title: "Get in Touch", desc: "Get in touch with the organising team.", Icon: Mail, tone: "blue" }
+];
 ];
 
 function App() {
@@ -104,9 +102,16 @@ function App() {
             <h1>Keya ATL<br /><span>Kali Pujo 2026</span></h1>
             <p className="hero-subtitle">A celebration of devotion, culture and community</p>
             <div className="ornament"><span />✦<span /></div>
+            <div style={{ display: "flex", justifyContent: "flex-end", margin: "24px 0 30px" }}>
+              <button className="feature-card red contribute-quick-card" onClick={() => goTo("contribute")} style={{ width: "min(100%, 340px)", minHeight: "112px" }}>
+                <span className="feature-icon"><HandHeart size={30} strokeWidth={1.8} /></span>
+                <span className="feature-copy"><strong>Contribute</strong><small>Support the celebrations</small></span>
+                <span className="feature-arrow"><ChevronRight size={19} /></span>
+              </button>
+            </div>
             <div className="feature-grid">
-              {FEATURES.map(({ id, title, desc, Icon, tone, wide }) => (
-                <button key={id} className={`feature-card ${tone} ${wide ? "wide" : ""}`} onClick={() => goTo(id)}>
+              {FEATURES.map(({ id, title, desc, Icon, tone }) => (
+                <button key={id} className={`feature-card ${tone}`} onClick={() => goTo(id)}>
                   <span className="feature-icon"><Icon size={27} strokeWidth={1.8} /></span>
                   <span className="feature-copy"><strong>{title}</strong><small>{desc}</small></span>
                   <span className="feature-arrow"><ChevronRight size={19} /></span>
