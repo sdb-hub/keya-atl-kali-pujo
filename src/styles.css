@@ -186,3 +186,9 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 .visarjan-mark{display:grid;place-items:center;width:126px;height:126px;margin:20px auto 25px;border-radius:50%;border:1px solid #efbd6277;background:radial-gradient(circle,#d92d3a88,#081a35 70%);color:#ffd17a;font-size:55px;box-shadow:0 0 32px #d92d3a44}
 @media(max-width:1000px){.schedule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.schedule-grid{grid-template-columns:1fr;gap:13px}.schedule-card{padding:18px 16px}.schedule-card-heading h3{font-size:19px}.schedule-event{padding:12px 4px}.schedule-event>strong{font-size:16px}.schedule-events-single{min-height:220px}.visarjan-mark{width:100px;height:100px;margin:12px auto 18px}}
+
+
+/* Keep blue feature cards blue on mobile, including the wide About Us card */
+@media(max-width:760px){
+  .feature-card.blue{background:linear-gradient(135deg,rgba(14,44,79,.96),rgba(5,17,38,.97))}
+}
