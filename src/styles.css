@@ -255,3 +255,26 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   .feature-card.event-feature-card{min-height:88px}
   .event-poster-image{border-radius:12px}
 }
+
+
+/* Flea market video opens in a large overlay instead of occupying the page */
+.flea-video-card{max-width:900px;margin:0 auto;padding:16px}
+.flea-video-launch{width:100%;min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1px solid #efbd62;border-radius:16px;background:radial-gradient(circle at center,rgba(180,40,48,.45),rgba(5,17,38,.98) 72%);color:#fff;cursor:pointer;transition:transform .2s,border-color .2s,box-shadow .2s}
+.flea-video-launch:hover{transform:translateY(-3px);border-color:#ffe4a0;box-shadow:0 12px 30px #0006}
+.flea-video-play{width:66px;height:66px;display:grid;place-items:center;padding-left:4px;border-radius:50%;background:linear-gradient(135deg,#ffe6a0,#d79731);color:#492d08;box-shadow:0 5px 22px #0007}
+.flea-video-launch strong{font:600 21px 'Playfair Display',Georgia,serif}
+.flea-video-launch small{color:#e4d5b9;font-size:12px}
+.flea-video-caption{text-align:center;margin:13px 0 0!important;font-size:12px}
+.flea-video-modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(0,5,15,.88);backdrop-filter:blur(8px)}
+.flea-video-modal-content{position:relative;width:min(100%,1100px);padding:12px;border:1px solid #efbd62;border-radius:18px;background:#07162c;box-shadow:0 25px 90px #000c}
+.flea-video-close{position:absolute;top:-17px;right:-17px;z-index:2;width:42px;height:42px;display:grid;place-items:center;border:1px solid #ffe6a0;border-radius:50%;background:#d99d3b;color:#2d1b06;cursor:pointer;box-shadow:0 4px 15px #0008}
+.flea-video-player{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#000}
+.flea-video-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:760px){
+  .flea-video-card{padding:12px}
+  .flea-video-launch{min-height:155px}
+  .flea-video-launch strong{font-size:18px}
+  .flea-video-modal{padding:14px}
+  .flea-video-modal-content{padding:7px;border-radius:12px}
+  .flea-video-close{top:-13px;right:-8px;width:36px;height:36px}
+}
