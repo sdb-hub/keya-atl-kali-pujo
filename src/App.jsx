@@ -126,7 +126,7 @@ function App() {
           </div>
         </section>
 
-        <section id="contribute" className="content-section section-anchor">
+<section id="contribute" className="content-section section-anchor">
           <SectionHeading kicker="BE A PART OF THE CELEBRATION" title="Contribute" subtitle="Your support helps bring our community celebration to life." />
           <div className="contributor-grid">
             <article className="info-card contributor-card">
@@ -157,7 +157,113 @@ function App() {
           <p className="section-note">Use the UPI ID to contribute. Please verify the recipient name before completing your payment.</p>
         </section>
 
-        <section id="donations" className="content-section section-anchor">
+<section id="schedule" className="content-section section-anchor">
+          <SectionHeading kicker="PLAN YOUR VISIT" title="Festival Schedule" subtitle="Join us for four days of devotion, culture and community celebrations." />
+          <div className="schedule-grid">
+            <article className="schedule-card">
+              <div className="schedule-card-heading"><span>08</span><div><h3>8th November</h3><p>Sunday</p></div></div>
+              <div className="schedule-events">
+                <ScheduleEvent time="12:00 PM" title="Agomon" />
+                <ScheduleEvent time="6:30 PM" title="Preparation of Pujo" />
+                <ScheduleEvent time="9:30 PM" title="Pushpanjali" />
+                <ScheduleEvent time="10:30 PM" title="Bhog Distribution" />
+                <ScheduleEvent time="11:00 PM – 2:00 AM" title="Yagya" />
+              </div>
+            </article>
+            <article className="schedule-card">
+              <div className="schedule-card-heading"><span>09</span><div><h3>9th November</h3><p>Monday</p></div></div>
+              <div className="schedule-events">
+                <ScheduleEvent time="11:00 AM – 10:30 PM" title="Flea Market" />
+                <ScheduleEvent time="10:00 AM – 12:00 PM" title="Sports" />
+                <ScheduleEvent time="2:00 PM – 4:00 PM" title="Sports" />
+                <ScheduleEvent time="4:30 PM – 6:30 PM" title="Keya Kalakriti" detail="A Cultural Competition" />
+                <ScheduleEvent time="7:00 PM – 8:00 PM" title="Aarti + Dhunuchi" />
+                <ScheduleEvent time="8:00 PM – 8:30 PM" title="Traditional Dhak Performance" />
+                <ScheduleEvent time="7:30 PM – 10:00 PM" title="Community Feast" />
+              </div>
+            </article>
+            <article className="schedule-card">
+              <div className="schedule-card-heading"><span>10</span><div><h3>10th November</h3><p>Tuesday</p></div></div>
+              <div className="schedule-events">
+                <ScheduleEvent time="11:00 AM – 10:30 PM" title="Flea Market" />
+                <ScheduleEvent time="5:00 PM – 5:30 PM" title="Aarti" />
+                <ScheduleEvent time="5:30 PM – 7:00 PM" title="Tarangaa" detail="The Kali Chronicles in Keya" />
+                <ScheduleEvent time="7:30 PM – 10:00 PM" title="Live Band Performance" />
+              </div>
+            </article>
+            <article className="schedule-card">
+              <div className="schedule-card-heading"><span>11</span><div><h3>11th November</h3><p>Wednesday</p></div></div>
+              <div className="schedule-events schedule-events-single">
+                <div className="visarjan-mark">✦</div>
+                <ScheduleEvent time="4:00 PM" title="Visarjan" />
+              </div>
+            </article>
+          </div>
+        </section>
+
+<section id="keya-kalakriti" className="content-section section-anchor event-poster-section">
+          <SectionHeading kicker="CULTURE · CREATIVITY · COMMUNITY" title="Keya Kalakriti" subtitle="A cultural competition celebrating the talents of our community." />
+          <img className="event-poster-image" src="/images/Kalakriti.jpg" alt="Keya Kalakriti event poster" />
+        </section>
+
+<section id="tarangaa" className="content-section section-anchor event-poster-section">
+          <SectionHeading kicker="THE KALI CHRONICLES IN KEYA" title="Tarangaa" subtitle="Join us for Tarangaa, a special cultural presentation." />
+          <img className="event-poster-image" src="/images/Tarangaa.jpg" alt="Tarangaa event poster" />
+        </section>
+
+<section id="bongolorean-live" className="content-section section-anchor event-poster-section">
+          <SectionHeading kicker="MUSIC · ENERGY · CELEBRATION" title="Bongolorean Live" subtitle="Get ready for a live musical celebration." />
+          <img className="event-poster-image" src="/images/Bongolorean.jpg" alt="Bongolorean Live event poster" />
+        </section>
+
+<section id="community-feast" className="content-section section-anchor">
+          <SectionHeading kicker="COME TOGETHER · SHARE THE JOY" title="Community Feast" subtitle="Be part of our celebration and enjoy a meal together with the community." />
+          <article className="info-card centered-card">
+            <Utensils className="large-card-icon" size={38} />
+            <h3>Community Feast Registration</h3>
+            <p>Book your plates for the community feast and celebrate together.</p>
+            <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyoeaxK7ftt6av0CYAh8TGWgFP4zyjoobvh1XlrRLs1tu98RImk6tGPA7HD-JLmkrw/exec" target="_blank" rel="noreferrer">Register for Community Feast <ExternalLink size={16} /></a>
+          </article>
+        </section>
+
+<section id="sports" className="content-section section-anchor">
+          <SectionHeading kicker="PLAY · PARTICIPATE · CELEBRATE" title="Sports & Games" subtitle="Bring your energy and join the fun." />
+          <article className="info-card centered-card">
+            <Trophy className="large-card-icon" size={38} />
+            <h3>Sports Registration</h3>
+            <p>Register for the sports and games organised as part of our Kali Pujo celebrations.</p>
+            <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyPg50eRJmwx66oVuOzobVLYWygiiRKHANa2NRiHV6zDU1P6MCLjuvmZMg0X8vTGAE2Gg/exec" target="_blank" rel="noreferrer">Register for Sports <ExternalLink size={16} /></a>
+          </article>
+        </section>
+
+<section id="flea-market" className="content-section section-anchor">
+          <SectionHeading kicker="EXPLORE · SHOP · SUPPORT LOCAL" title="Flea Market Stalls" subtitle="Take a look at the stalls and discover what our community flea market has to offer." />
+          <article className="info-card flea-video-card">
+            <button className="flea-video-launch" onClick={() => setFleaVideoOpen(true)} aria-label="Play flea market stalls video">
+              <span className="flea-video-play"><Play size={30} fill="currentColor" /></span>
+              <strong>Explore Our Flea Market Stalls</strong>
+              <small>Click to play video</small>
+            </button>
+            <p className="flea-video-caption">Watch the video showcasing our flea market stalls</p>
+          </article>
+          {fleaVideoOpen && (
+            <div className="flea-video-modal" role="dialog" aria-modal="true" aria-label="Flea Market Stalls video" onClick={() => setFleaVideoOpen(false)}>
+              <div className="flea-video-modal-content" onClick={(event) => event.stopPropagation()}>
+                <button className="flea-video-close" onClick={() => setFleaVideoOpen(false)} aria-label="Close video"><X size={23} /></button>
+                <div className="flea-video-player flea-video-shorts">
+                  <iframe
+                    src="https://www.youtube.com/embed/2tcIcMoDi_k?autoplay=1&playsinline=1&rel=0"
+                    title="Keya ATL Kali Pujo 2026 Flea Market Stalls"
+                    allow="autoplay; fullscreen"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+        </section>
+
+<section id="donations" className="content-section section-anchor">
           <SectionHeading kicker="OUR COMMUNITY, OUR CONTRIBUTION" title="Donation Details" subtitle="Thank you to every household supporting Kali Pujo." />
 
           {donationStatus === "loading" && (
@@ -253,113 +359,7 @@ function App() {
           )}
         </section>
 
-        <section id="schedule" className="content-section section-anchor">
-          <SectionHeading kicker="PLAN YOUR VISIT" title="Festival Schedule" subtitle="Join us for four days of devotion, culture and community celebrations." />
-          <div className="schedule-grid">
-            <article className="schedule-card">
-              <div className="schedule-card-heading"><span>08</span><div><h3>8th November</h3><p>Sunday</p></div></div>
-              <div className="schedule-events">
-                <ScheduleEvent time="12:00 PM" title="Agomon" />
-                <ScheduleEvent time="6:30 PM" title="Preparation of Pujo" />
-                <ScheduleEvent time="9:30 PM" title="Pushpanjali" />
-                <ScheduleEvent time="10:30 PM" title="Bhog Distribution" />
-                <ScheduleEvent time="11:00 PM – 2:00 AM" title="Yagya" />
-              </div>
-            </article>
-            <article className="schedule-card">
-              <div className="schedule-card-heading"><span>09</span><div><h3>9th November</h3><p>Monday</p></div></div>
-              <div className="schedule-events">
-                <ScheduleEvent time="11:00 AM – 10:30 PM" title="Flea Market" />
-                <ScheduleEvent time="10:00 AM – 12:00 PM" title="Sports" />
-                <ScheduleEvent time="2:00 PM – 4:00 PM" title="Sports" />
-                <ScheduleEvent time="4:30 PM – 6:30 PM" title="Keya Kalakriti" detail="A Cultural Competition" />
-                <ScheduleEvent time="7:00 PM – 8:00 PM" title="Aarti + Dhunuchi" />
-                <ScheduleEvent time="8:00 PM – 8:30 PM" title="Traditional Dhak Performance" />
-                <ScheduleEvent time="7:30 PM – 10:00 PM" title="Community Feast" />
-              </div>
-            </article>
-            <article className="schedule-card">
-              <div className="schedule-card-heading"><span>10</span><div><h3>10th November</h3><p>Tuesday</p></div></div>
-              <div className="schedule-events">
-                <ScheduleEvent time="11:00 AM – 10:30 PM" title="Flea Market" />
-                <ScheduleEvent time="5:00 PM – 5:30 PM" title="Aarti" />
-                <ScheduleEvent time="5:30 PM – 7:00 PM" title="Tarangaa" detail="The Kali Chronicles in Keya" />
-                <ScheduleEvent time="7:30 PM – 10:00 PM" title="Live Band Performance" />
-              </div>
-            </article>
-            <article className="schedule-card">
-              <div className="schedule-card-heading"><span>11</span><div><h3>11th November</h3><p>Wednesday</p></div></div>
-              <div className="schedule-events schedule-events-single">
-                <div className="visarjan-mark">✦</div>
-                <ScheduleEvent time="4:00 PM" title="Visarjan" />
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section id="flea-market" className="content-section section-anchor">
-          <SectionHeading kicker="EXPLORE · SHOP · SUPPORT LOCAL" title="Flea Market Stalls" subtitle="Take a look at the stalls and discover what our community flea market has to offer." />
-          <article className="info-card flea-video-card">
-            <button className="flea-video-launch" onClick={() => setFleaVideoOpen(true)} aria-label="Play flea market stalls video">
-              <span className="flea-video-play"><Play size={30} fill="currentColor" /></span>
-              <strong>Explore Our Flea Market Stalls</strong>
-              <small>Click to play video</small>
-            </button>
-            <p className="flea-video-caption">Watch the video showcasing our flea market stalls</p>
-          </article>
-          {fleaVideoOpen && (
-            <div className="flea-video-modal" role="dialog" aria-modal="true" aria-label="Flea Market Stalls video" onClick={() => setFleaVideoOpen(false)}>
-              <div className="flea-video-modal-content" onClick={(event) => event.stopPropagation()}>
-                <button className="flea-video-close" onClick={() => setFleaVideoOpen(false)} aria-label="Close video"><X size={23} /></button>
-                <div className="flea-video-player flea-video-shorts">
-                  <iframe
-                    src="https://www.youtube.com/embed/2tcIcMoDi_k?autoplay=1&playsinline=1&rel=0"
-                    title="Keya ATL Kali Pujo 2026 Flea Market Stalls"
-                    allow="autoplay; fullscreen"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-        </section>
-
-        <section id="keya-kalakriti" className="content-section section-anchor event-poster-section">
-          <SectionHeading kicker="CULTURE · CREATIVITY · COMMUNITY" title="Keya Kalakriti" subtitle="A cultural competition celebrating the talents of our community." />
-          <img className="event-poster-image" src="/images/Kalakriti.jpg" alt="Keya Kalakriti event poster" />
-        </section>
-
-        <section id="tarangaa" className="content-section section-anchor event-poster-section">
-          <SectionHeading kicker="THE KALI CHRONICLES IN KEYA" title="Tarangaa" subtitle="Join us for Tarangaa, a special cultural presentation." />
-          <img className="event-poster-image" src="/images/Tarangaa.jpg" alt="Tarangaa event poster" />
-        </section>
-
-        <section id="bongolorean-live" className="content-section section-anchor event-poster-section">
-          <SectionHeading kicker="MUSIC · ENERGY · CELEBRATION" title="Bongolorean Live" subtitle="Get ready for a live musical celebration." />
-          <img className="event-poster-image" src="/images/Bongolorean.jpg" alt="Bongolorean Live event poster" />
-        </section>
-
-        <section id="sports" className="content-section section-anchor">
-          <SectionHeading kicker="PLAY · PARTICIPATE · CELEBRATE" title="Sports & Games" subtitle="Bring your energy and join the fun." />
-          <article className="info-card centered-card">
-            <Trophy className="large-card-icon" size={38} />
-            <h3>Sports Registration</h3>
-            <p>Register for the sports and games organised as part of our Kali Pujo celebrations.</p>
-            <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyPg50eRJmwx66oVuOzobVLYWygiiRKHANa2NRiHV6zDU1P6MCLjuvmZMg0X8vTGAE2Gg/exec" target="_blank" rel="noreferrer">Register for Sports <ExternalLink size={16} /></a>
-          </article>
-        </section>
-
-        <section id="community-feast" className="content-section section-anchor">
-          <SectionHeading kicker="COME TOGETHER · SHARE THE JOY" title="Community Feast" subtitle="Be part of our celebration and enjoy a meal together with the community." />
-          <article className="info-card centered-card">
-            <Utensils className="large-card-icon" size={38} />
-            <h3>Community Feast Registration</h3>
-            <p>Book your plates for the community feast and celebrate together.</p>
-            <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyoeaxK7ftt6av0CYAh8TGWgFP4zyjoobvh1XlrRLs1tu98RImk6tGPA7HD-JLmkrw/exec" target="_blank" rel="noreferrer">Register for Community Feast <ExternalLink size={16} /></a>
-          </article>
-        </section>
-
-        <section id="sponsors" className="content-section section-anchor">
+<section id="sponsors" className="content-section section-anchor">
           <SectionHeading kicker="WITH GRATITUDE" title="Our Sponsors" subtitle="Thank you to our sponsors for supporting the Keya ATL Kali Pujo 2026 celebrations." />
           <div className="sponsor-board-wrap">
             <img
@@ -370,7 +370,7 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="content-section section-anchor">
+<section id="about" className="content-section section-anchor">
           <SectionHeading kicker="THE PEOPLE BEHIND THE CELEBRATION" title="About Us" subtitle="A community coming together to celebrate Kali Pujo." />
           <article className="info-card team-card">
             <Users className="large-card-icon" size={38} />
@@ -409,7 +409,7 @@ function App() {
           </article>
         </section>
 
-        <section id="contact" className="content-section section-anchor">
+<section id="contact" className="content-section section-anchor">
           <SectionHeading kicker="WE’RE HERE TO HELP" title="Contact Us" subtitle="For any queries about Keya ATL Kali Pujo 2026, please get in touch." />
           <article className="info-card contact-card">
             <Heart className="large-card-icon" size={38} />
