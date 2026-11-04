@@ -225,3 +225,21 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   .contact-details{grid-template-columns:1fr}
   .contact-details p:last-child{grid-column:auto}
 }
+
+
+/* Compact golden contribution button, separated from the main feature grid */
+.contribute-quick-wrap{display:flex;justify-content:flex-end;margin:14px 0 25px}
+.feature-card.contribute-quick-card{grid-column:auto;width:auto;min-width:210px;min-height:58px;gap:10px;padding:9px 16px;border:1px solid #ffe5a1;border-radius:999px;background:linear-gradient(135deg,#ffe6a0 0%,#e7ad45 52%,#c98525 100%);color:#382307;box-shadow:0 7px 22px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.65)}
+.feature-card.contribute-quick-card:hover{transform:translateY(-2px);border-color:#fff2c8;background:linear-gradient(135deg,#fff0bd 0%,#efbd62 55%,#d79731 100%)}
+.feature-card.contribute-quick-card .feature-icon{width:32px;height:32px;flex-basis:32px;border-radius:50%;background:rgba(103,62,10,.12);color:#68420c}
+.feature-card.contribute-quick-card .feature-copy{gap:2px}
+.feature-card.contribute-quick-card .feature-copy strong{font:700 15px 'DM Sans',Arial,sans-serif;color:#382307}
+.feature-card.contribute-quick-card .feature-copy small{font-size:10px;color:#634515}
+.feature-card.contribute-quick-card .feature-arrow{color:#68420c}
+@media(max-width:760px){
+  .contribute-quick-wrap{margin:12px 0 20px}
+  .feature-card.contribute-quick-card{min-width:178px;min-height:50px;padding:7px 13px;gap:8px;background:linear-gradient(135deg,#ffe6a0 0%,#e7ad45 52%,#c98525 100%)}
+  .feature-card.contribute-quick-card .feature-copy strong{font-size:13px}
+  .feature-card.contribute-quick-card .feature-copy small{font-size:9px}
+  .feature-card.contribute-quick-card .feature-icon{width:28px;height:28px;flex-basis:28px}
+}
