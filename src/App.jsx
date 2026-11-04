@@ -313,7 +313,7 @@ function App() {
                 <button className="flea-video-close" onClick={() => setFleaVideoOpen(false)} aria-label="Close video"><X size={23} /></button>
                 <div className="flea-video-player flea-video-shorts">
                   <iframe
-                    src="https://www.youtube.com/embed/TKeQ92XPt0M?autoplay=1&playsinline=1&rel=0"
+                    src="https://www.youtube.com/embed/2tcIcMoDi_k?autoplay=1&playsinline=1&rel=0"
                     title="Keya ATL Kali Pujo 2026 Flea Market Stalls"
                     allow="autoplay; fullscreen"
                     allowFullScreen
