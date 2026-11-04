@@ -335,6 +335,7 @@ function App() {
               <div className="team-member">Amit Bhowmick</div>
               <div className="team-member">Aditi Dey</div>
               <div className="team-member">Geetha Venkat</div>
+              <div className="team-member">Soougata Baasu</div>
             </div>
           </article>
           <div className="contact-strip contact-strip-stack">
