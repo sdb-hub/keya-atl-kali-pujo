@@ -209,13 +209,46 @@ function App() {
         </section>
 
         <section id="schedule" className="content-section section-anchor">
-          <SectionHeading kicker="PLAN YOUR VISIT" title="Festival Schedule" subtitle="Join us for puja, rituals and cultural programmes." />
-          <article className="info-card centered-card">
-            <CalendarDays className="large-card-icon" size={38} />
-            <h3>Programme Schedule</h3>
-            <p>The detailed Kali Pujo schedule will be published here.</p>
-            <span className="coming-soon">SCHEDULE PDF TO BE ADDED</span>
-          </article>
+          <SectionHeading kicker="PLAN YOUR VISIT" title="Festival Schedule" subtitle="Join us for four days of devotion, culture and community celebrations." />
+          <div className="schedule-grid">
+            <article className="schedule-card">
+              <div className="schedule-card-heading"><span>08</span><div><h3>8th November</h3><p>Sunday</p></div></div>
+              <div className="schedule-events">
+                <ScheduleEvent time="12:00 PM" title="Agomon" />
+                <ScheduleEvent time="6:30 PM" title="Preparation of Pujo" />
+                <ScheduleEvent time="9:30 PM" title="Pushpanjali" />
+                <ScheduleEvent time="10:30 PM" title="Bhog Distribution" />
+                <ScheduleEvent time="11:00 PM – 2:00 AM" title="Yagya" />
+              </div>
+            </article>
+            <article className="schedule-card">
+              <div className="schedule-card-heading"><span>09</span><div><h3>9th November</h3><p>Monday</p></div></div>
+              <div className="schedule-events">
+                <ScheduleEvent time="11:00 AM – 10:30 PM" title="Flea Market" />
+                <ScheduleEvent time="12:00 PM – 4:00 PM" title="Sports" />
+                <ScheduleEvent time="4:30 PM – 6:30 PM" title="Keya Kalakriti" detail="A Cultural Competition" />
+                <ScheduleEvent time="7:00 PM – 8:00 PM" title="Aarti + Dhunuchi" />
+                <ScheduleEvent time="8:00 PM – 8:30 PM" title="Traditional Dhak Performance" />
+                <ScheduleEvent time="8:30 PM – 10:00 PM" title="Community Feast" />
+              </div>
+            </article>
+            <article className="schedule-card">
+              <div className="schedule-card-heading"><span>10</span><div><h3>10th November</h3><p>Tuesday</p></div></div>
+              <div className="schedule-events">
+                <ScheduleEvent time="11:00 AM – 10:30 PM" title="Flea Market" />
+                <ScheduleEvent time="5:00 PM – 5:30 PM" title="Aarti" />
+                <ScheduleEvent time="5:30 PM – 7:00 PM" title="Tarangaa" detail="The Kali Chronicles in Keya" />
+                <ScheduleEvent time="7:30 PM – 10:00 PM" title="Live Band Performance" />
+              </div>
+            </article>
+            <article className="schedule-card">
+              <div className="schedule-card-heading"><span>11</span><div><h3>11th November</h3><p>Wednesday</p></div></div>
+              <div className="schedule-events schedule-events-single">
+                <div className="visarjan-mark">✦</div>
+                <ScheduleEvent time="4:00 PM" title="Visarjan" />
+              </div>
+            </article>
+          </div>
         </section>
 
         <section id="sports" className="content-section section-anchor">
@@ -279,6 +312,10 @@ function App() {
       <footer className="site-footer"><span>🪔</span><strong>Keya ATL Kali Pujo 2026</strong><small>Celebrating devotion, culture and community</small><button onClick={() => goTo("home")}><ArrowUp size={15} /> Back to top</button></footer>
     </>
   );
+}
+
+function ScheduleEvent({ time, title, detail }) {
+  return <div className="schedule-event"><span>{time}</span><strong>{title}</strong>{detail && <small>{detail}</small>}</div>;
 }
 
 function SectionHeading({ kicker, title, subtitle }) {
