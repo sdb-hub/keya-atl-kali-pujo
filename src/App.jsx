@@ -307,34 +307,12 @@ function App() {
 
         <section id="sponsors" className="content-section section-anchor">
           <SectionHeading kicker="WITH GRATITUDE" title="Our Sponsors" subtitle="Thank you to our sponsors for supporting the Keya ATL Kali Pujo 2026 celebrations." />
-          <div className="sponsor-grid">
-            <article className="sponsor-card cahoot-sponsor">
-              <div className="cahoot-logos">
-                <img src="/images/Cahootlogo.jpg" alt="Cahoot symbol" />
-                <img src="/images/Cahoot.jpg" alt="Cahoot wordmark" />
-              </div>
-              <h3>Cahoot</h3>
-            </article>
-            <article className="sponsor-card">
-              <img src="/images/Cabbo.jpg" alt="Cabbo logo" />
-              <h3>Cabbo</h3>
-            </article>
-            <article className="sponsor-card">
-              <img src="/images/Taraash.jpg" alt="Taraash Interiors logo" />
-              <h3>Taraash Interiors</h3>
-            </article>
-            <article className="sponsor-card">
-              <img src="/images/faabro.jpg" alt="FaabrCare logo" />
-              <h3>FaabrCare</h3>
-            </article>
-            <article className="sponsor-card">
-              <img src="/images/Ayoniz.png" alt="Ayoniz International Preschool logo" />
-              <h3>Ayoniz International Preschool</h3>
-            </article>
-            <article className="sponsor-card">
-              <img src="/images/Simplyfyspaces.jpg" alt="Simplyfyspaces logo" />
-              <h3>Simplyfyspaces</h3>
-            </article>
+          <div className="sponsor-board-wrap">
+            <img
+              className="sponsor-board-image"
+              src="/images/Sponsor%20logo.jpg"
+              alt="Keya ATL Kali Pujo 2026 sponsors"
+            />
           </div>
         </section>
 
