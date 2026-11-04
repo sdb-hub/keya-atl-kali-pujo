@@ -243,3 +243,15 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   .feature-card.contribute-quick-card .feature-copy small{font-size:9px}
   .feature-card.contribute-quick-card .feature-icon{width:28px;height:28px;flex-basis:28px}
 }
+
+
+/* Featured cultural event cards and their poster sections */
+.feature-card.event-feature-card{gap:12px}
+.event-feature-image{display:block;width:76px;height:76px;flex:0 0 76px;object-fit:cover;object-position:center;border-radius:12px;border:1px solid #efbd62aa;background:#081a35}
+.event-poster-section{max-width:900px}
+.event-poster-image{display:block;width:100%;max-width:760px;max-height:820px;object-fit:contain;margin:0 auto;border:1px solid #efbd6277;border-radius:16px;box-shadow:0 16px 38px #0006;background:#081a35}
+@media(max-width:760px){
+  .event-feature-image{width:62px;height:62px;flex-basis:62px;border-radius:10px}
+  .feature-card.event-feature-card{min-height:88px}
+  .event-poster-image{border-radius:12px}
+}
