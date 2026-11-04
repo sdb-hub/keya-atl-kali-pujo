@@ -12,7 +12,8 @@ const NAV = [
   { id: "sports", label: "Sports" },
   { id: "community-feast", label: "Community Feast" },
   { id: "sponsors", label: "Our Sponsors" },
-  { id: "about", label: "About Us" }
+  { id: "about", label: "About Us" },
+  { id: "contact", label: "Contact Us" }
 ];
 
 const FEATURES = [
@@ -22,7 +23,7 @@ const FEATURES = [
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
   { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
   { id: "sponsors", title: "Our Sponsors", desc: "Thank you to our celebration partners.", Icon: Heart, tone: "blue" },
-  { id: "about", title: "About Us", desc: "Meet the Kali Pujo team and contact us.", Icon: Users, tone: "blue", wide: true }
+  { id: "about", title: "About Us", desc: "Meet the team behind the celebration.", Icon: Users, tone: "blue", wide: true }
 ];
 
 function App() {
@@ -213,9 +214,8 @@ function App() {
                       <div className="donation-results" aria-live="polite">
                         <div className="search-result-count">{matches.length} matching contribution{matches.length === 1 ? "" : "s"}</div>
                         {matches.map((item, index) => (
-                          <div className="donation-row" key={`${item.flat}-${item.name}-${index}`}>
+                          <div className="donation-row" key={`${item.flat}-${index}`}>
                             <span>{item.flat}</span>
-                            <strong>{item.name}</strong>
                             <b>₹{Number(item.amount).toLocaleString("en-IN", { maximumFractionDigits: 2 })}</b>
                           </div>
                         ))}
@@ -228,7 +228,6 @@ function App() {
                       {[...donations, ...donations].map((item, index) => (
                         <div className="donation-row" key={`${item.flat}-${index}`}>
                           <span>{item.flat}</span>
-                          <strong>{item.name}</strong>
                           <b>₹{Number(item.amount).toLocaleString("en-IN", { maximumFractionDigits: 2 })}</b>
                         </div>
                       ))}
@@ -320,7 +319,7 @@ function App() {
           <SectionHeading kicker="THE PEOPLE BEHIND THE CELEBRATION" title="About Us" subtitle="A community coming together to celebrate Kali Pujo." />
           <article className="info-card team-card">
             <Users className="large-card-icon" size={38} />
-            <h3>Team KaliPujo</h3>
+            <h3 className="team-card-title">Team Kali Pujo</h3>
             <div className="team-grid">
               <div className="team-member">Soumalya Das</div>
               <div className="team-member">Sonam Agnihotri</div>
@@ -352,10 +351,19 @@ function App() {
               <div className="team-member">Prachi Debnath</div>
             </div>
           </article>
-          <div className="contact-strip contact-strip-stack">
-            <Heart size={18} />
-            <div><strong>For any queries, please contact:</strong><br /><a href="tel:9477559166">Prateek – 9477559166</a><span> · </span><a href="tel:7686041496">Soumyadip – 7686041496</a></div>
-          </div>
+        </section>
+
+        <section id="contact" className="content-section section-anchor">
+          <SectionHeading kicker="WE’RE HERE TO HELP" title="Contact Us" subtitle="For any queries about Keya ATL Kali Pujo 2026, please get in touch." />
+          <article className="info-card contact-card">
+            <Heart className="large-card-icon" size={38} />
+            <h3>Get in Touch</h3>
+            <div className="contact-details">
+              <p><strong>Prateek Sadhukhan</strong><a href="tel:9477559166">9477559166</a></p>
+              <p><strong>Soumyadip Basu</strong><a href="tel:7686041496">7686041496</a></p>
+              <p><strong>Official Email</strong><a href="mailto:keyaatlkpcommittee@gmail.com">keyaatlkpcommittee@gmail.com</a></p>
+            </div>
+          </article>
         </section>
       </main>
 
