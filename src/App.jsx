@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import {
   Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users, Utensils,
-  ChevronRight, Copy, ExternalLink, ArrowUp, Flame, Heart, Pause, Play
+  ChevronRight, Copy, ExternalLink, ArrowUp, Flame, Heart, Pause, Play, Search
 } from "lucide-react";
 
 const NAV = [
@@ -30,6 +30,7 @@ function App() {
   const [donationSummary, setDonationSummary] = useState({ total: 0, flatCount: 0, towers: [] });
   const [donationStatus, setDonationStatus] = useState("loading");
   const [paused, setPaused] = useState(false);
+  const [flatSearch, setFlatSearch] = useState("");
 
   const goTo = (id) => {
     setActive(id);
@@ -187,8 +188,38 @@ function App() {
                     {paused ? "Resume" : "Pause"}
                   </button>
                 </div>
+                <div className="donation-search">
+                  <Search size={17} aria-hidden="true" />
+                  <input
+                    type="search"
+                    value={flatSearch}
+                    onChange={(event) => setFlatSearch(event.target.value)}
+                    placeholder="Search by flat number (e.g. A-101)"
+                    aria-label="Search household contributions by flat number"
+                  />
+                  {flatSearch && <button type="button" onClick={() => setFlatSearch("")} aria-label="Clear flat search"><X size={16} /></button>}
+                </div>
                 {donations.length === 0 ? (
                   <p className="empty-state">No public contributions have been recorded yet.</p>
+                ) : flatSearch.trim() ? (
+                  (() => {
+                    const query = flatSearch.trim().toUpperCase().replace(/[^A-Z0-9]/g, "");
+                    const matches = donations.filter((item) =>
+                      String(item.flat || "").toUpperCase().replace(/[^A-Z0-9]/g, "").includes(query)
+                    );
+                    return matches.length ? (
+                      <div className="donation-results" aria-live="polite">
+                        <div className="search-result-count">{matches.length} matching contribution{matches.length === 1 ? "" : "s"}</div>
+                        {matches.map((item, index) => (
+                          <div className="donation-row" key={`${item.flat}-${item.name}-${index}`}>
+                            <span>{item.flat}</span>
+                            <strong>{item.name}</strong>
+                            <b>₹{Number(item.amount).toLocaleString("en-IN", { maximumFractionDigits: 2 })}</b>
+                          </div>
+                        ))}
+                      </div>
+                    ) : <p className="empty-state">No contributions found for “{flatSearch}”. Try another flat number.</p>;
+                  })()
                 ) : (
                   <div className={paused ? "donation-scroll paused" : "donation-scroll"}>
                     <div className="donation-track">
