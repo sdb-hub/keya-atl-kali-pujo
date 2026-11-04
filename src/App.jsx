@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users, Utensils, Mail,
+  Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users, Utensils, Mail, ShoppingBag,
   ChevronRight, Copy, ExternalLink, ArrowUp, Flame, Heart, Pause, Play, Search
 } from "lucide-react";
 
@@ -9,6 +9,7 @@ const NAV = [
   { id: "contribute", label: "Contribute" },
   { id: "donations", label: "Donations" },
   { id: "schedule", label: "Schedule" },
+  { id: "flea-market", label: "Flea Market Stalls" },
   { id: "sports", label: "Sports" },
   { id: "community-feast", label: "Community Feast" },
   { id: "sponsors", label: "Our Sponsors" },
@@ -20,6 +21,7 @@ const FEATURES = [
   { id: "contribute", title: "Contribute", desc: "Support the celebration with a contribution.", Icon: HandHeart, tone: "red" },
   { id: "donations", title: "Donation Details", desc: "See contributions from our community.", Icon: ReceiptText, tone: "blue" },
   { id: "schedule", title: "Schedule", desc: "Puja timings and cultural programmes.", Icon: CalendarDays, tone: "red" },
+  { id: "flea-market", title: "Flea Market Stalls", desc: "Explore the stalls at our community flea market.", Icon: ShoppingBag, tone: "blue" },
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
   { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
   { id: "sponsors", title: "Our Sponsors", desc: "Thank you to our celebration partners.", Icon: Heart, tone: "blue" },
@@ -283,6 +285,22 @@ function App() {
               </div>
             </article>
           </div>
+        </section>
+
+        <section id="flea-market" className="content-section section-anchor">
+          <SectionHeading kicker="EXPLORE · SHOP · SUPPORT LOCAL" title="Flea Market Stalls" subtitle="Take a look at the stalls and discover what our community flea market has to offer." />
+          <article className="info-card" style={{ maxWidth: "1000px", margin: "0 auto", padding: "clamp(16px, 3vw, 28px)" }}>
+            <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "14px", background: "#160d12" }}>
+              <iframe
+                src="https://drive.google.com/file/d/1S0PcW6cfvC40B5QHhntIqbaqHune5EGb/preview"
+                title="Keya ATL Kali Pujo 2026 Flea Market Stalls"
+                allow="autoplay"
+                allowFullScreen
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
+              />
+            </div>
+            <p style={{ textAlign: "center", margin: "16px 0 0", opacity: 0.8 }}>Video showcasing our flea market stalls</p>
+          </article>
         </section>
 
         <section id="sports" className="content-section section-anchor">
