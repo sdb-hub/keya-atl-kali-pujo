@@ -103,11 +103,11 @@ function App() {
             <h1>Keya ATL<br /><span>Kali Pujo 2026</span></h1>
             <p className="hero-subtitle">A celebration of devotion, culture and community</p>
             <div className="ornament"><span />✦<span /></div>
-            <div style={{ display: "flex", justifyContent: "flex-end", margin: "24px 0 30px" }}>
-              <button className="feature-card red contribute-quick-card" onClick={() => goTo("contribute")} style={{ width: "min(100%, 340px)", minHeight: "112px" }}>
-                <span className="feature-icon"><HandHeart size={30} strokeWidth={1.8} /></span>
+            <div className="contribute-quick-wrap">
+              <button className="feature-card contribute-quick-card" onClick={() => goTo("contribute")}>
+                <span className="feature-icon"><HandHeart size={21} strokeWidth={1.9} /></span>
                 <span className="feature-copy"><strong>Contribute</strong><small>Support the celebrations</small></span>
-                <span className="feature-arrow"><ChevronRight size={19} /></span>
+                <span className="feature-arrow"><ChevronRight size={17} /></span>
               </button>
             </div>
             <div className="feature-grid">
