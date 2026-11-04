@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users, Utensils,
+  Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users, Utensils, Mail,
   ChevronRight, Copy, ExternalLink, ArrowUp, Flame, Heart, Pause, Play, Search
 } from "lucide-react";
 
@@ -23,7 +23,8 @@ const FEATURES = [
   { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
   { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
   { id: "sponsors", title: "Our Sponsors", desc: "Thank you to our celebration partners.", Icon: Heart, tone: "blue" },
-  { id: "about", title: "About Us", desc: "Meet the team behind the celebration.", Icon: Users, tone: "blue", wide: true }
+  { id: "about", title: "About Us", desc: "Meet the team behind the celebration.", Icon: Users, tone: "blue", wide: true },
+  { id: "contact", title: "Contact Us", desc: "Get in touch with the organising team.", Icon: Mail, tone: "red" }
 ];
 
 function App() {
