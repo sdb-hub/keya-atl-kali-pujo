@@ -278,3 +278,25 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   .flea-video-modal-content{padding:7px;border-radius:12px}
   .flea-video-close{top:-13px;right:-8px;width:36px;height:36px}
 }
+
+
+/* Vertical YouTube Shorts player */
+.flea-video-player.flea-video-shorts{
+  width:auto;
+  height:min(78vh,760px);
+  max-width:100%;
+  aspect-ratio:9/16;
+  margin:0 auto;
+  overflow:hidden;
+  border-radius:12px;
+  background:#000;
+}
+.flea-video-player.flea-video-shorts iframe{
+  width:100%;
+  height:100%;
+}
+@media(max-width:760px){
+  .flea-video-modal{padding:12px}
+  .flea-video-modal-content{width:auto;max-width:100%;padding:6px}
+  .flea-video-player.flea-video-shorts{height:min(76vh,700px);width:auto;max-width:calc(100vw - 52px)}
+}
