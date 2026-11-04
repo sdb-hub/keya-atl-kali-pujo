@@ -23,12 +23,12 @@ const FEATURES = [
   { id: "tarangaa", title: "Tarangaa", desc: "The Kali Chronicles in Keya.", image: "/images/Tarangaa.jpg", tone: "red", event: true },
   { id: "bongolorean-live", title: "Bongolorean Live", desc: "Live music and performances.", image: "/images/Bongolorean.jpg", tone: "blue", event: true },
   { id: "community-feast", title: "Community Feast", desc: "Celebrate together over a community feast.", Icon: Utensils, tone: "red" },
-  { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "red" },
-  { id: "flea-market", title: "Flea Markets", desc: "Explore the stalls at our community flea market.", Icon: ShoppingBag, tone: "blue" },
-  { id: "donations", title: "Donation Details", desc: "See contributions from our community.", Icon: ReceiptText, tone: "red" },
-  { id: "sponsors", title: "Our Sponsors", desc: "Thank you to our celebration partners.", Icon: Heart, tone: "blue" },
-  { id: "about", title: "About Us", desc: "Meet the team behind the celebration.", Icon: Users, tone: "red" },
-  { id: "contact", title: "Get in Touch", desc: "Get in touch with the organising team.", Icon: Mail, tone: "blue" }
+  { id: "sports", title: "Sports", desc: "Join the community sports events.", Icon: Trophy, tone: "blue" },
+  { id: "flea-market", title: "Flea Markets", desc: "Explore the stalls at our community flea market.", Icon: ShoppingBag, tone: "red" },
+  { id: "donations", title: "Donation Details", desc: "See contributions from our community.", Icon: ReceiptText, tone: "blue" },
+  { id: "sponsors", title: "Our Sponsors", desc: "Thank you to our celebration partners.", Icon: Heart, tone: "red" },
+  { id: "about", title: "About Us", desc: "Meet the team behind the celebration.", Icon: Users, tone: "blue" },
+  { id: "contact", title: "Get in Touch", desc: "Get in touch with the organising team.", Icon: Mail, tone: "red" }
 ];
 
 function App() {
