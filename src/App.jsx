@@ -311,9 +311,9 @@ function App() {
             <div className="flea-video-modal" role="dialog" aria-modal="true" aria-label="Flea Market Stalls video" onClick={() => setFleaVideoOpen(false)}>
               <div className="flea-video-modal-content" onClick={(event) => event.stopPropagation()}>
                 <button className="flea-video-close" onClick={() => setFleaVideoOpen(false)} aria-label="Close video"><X size={23} /></button>
-                <div className="flea-video-player">
+                <div className="flea-video-player flea-video-shorts">
                   <iframe
-                    src="https://drive.google.com/file/d/1S0PcW6cfvC40B5QHhntIqbaqHune5EGb/preview"
+                    src="https://www.youtube.com/embed/TKeQ92XPt0M?autoplay=1&playsinline=1&rel=0"
                     title="Keya ATL Kali Pujo 2026 Flea Market Stalls"
                     allow="autoplay; fullscreen"
                     allowFullScreen
