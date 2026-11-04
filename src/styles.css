@@ -192,3 +192,12 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 @media(max-width:760px){
   .feature-card.blue{background:linear-gradient(135deg,rgba(14,44,79,.96),rgba(5,17,38,.97))}
 }
+
+/* Flat-number search for public household contributions */
+.donation-search{display:flex;align-items:center;gap:10px;margin:14px 18px;padding:11px 13px;border:1px solid #ffffff35;border-radius:12px;background:#ffffff0b;color:#f6d99e}
+.donation-search input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#fff;font:inherit;font-size:13px}
+.donation-search input::placeholder{color:#bac6d7}
+.donation-search button{display:grid;place-items:center;border:0;background:transparent;color:#fff;cursor:pointer;padding:2px}
+.donation-results{max-height:300px;overflow-y:auto}
+.search-result-count{padding:8px 19px;color:#bac6d7;font-size:11px}
+@media(max-width:760px){.donation-search{margin:12px;padding:10px 11px}.donation-search input{font-size:12px}.donation-results .donation-row{grid-template-columns:60px minmax(0,1fr) 85px;gap:7px;padding:13px 12px;font-size:11px}}
