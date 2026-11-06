@@ -374,16 +374,9 @@ function App() {
                 <p>Monday, 9 November 2026 · Futsal Court & Clubhouse</p>
               </div>
             </div>
-            <p className="sports-fiesta-intro">The complete Sports Fiesta 2026 handbook is available to download. It includes:</p>
-            <ul className="sports-fiesta-contents">
-              <li>Festival day plan, timings and venues</li>
-              <li>Team rosters and match fixtures for 7 Stones Lagori and Ultimate Frisbee</li>
-              <li>Kids' and adults' Speed Chess schedules and pairings</li>
-              <li>Under-10 fun games and activity schedule</li>
-              <li>Official rules posters and game guidelines</li>
-            </ul>
+            <p className="sports-fiesta-intro">View the event schedule, team fixtures and game rules.</p>
             <a className="registration-link sports-pdf-download" href="/Keya_ATL_Kali_Pujo_Sports_Fiesta_2026_FINAL.pdf" target="_blank" rel="noreferrer" download>
-              Download Sports Fiesta PDF <ExternalLink size={16} />
+              Download PDF <ExternalLink size={16} />
             </a>
             <div className="sports-query-contacts">
               <strong>For any queries:</strong>
