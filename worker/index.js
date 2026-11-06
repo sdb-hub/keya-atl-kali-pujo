@@ -3,18 +3,7 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === "/api/donations") return handleDonations(env);
 
-    // Serve the SPA shell for direct visits and refreshes on section URLs.
-    // The React app reads the original pathname and opens the requested section.
-    const sectionPaths = new Set([
-      "/contribute", "/schedule", "/keyakalakriti", "/tarangaa",
-      "/bongoloreanlive", "/communityfeast", "/sports", "/fleamarket",
-      "/donationdetails", "/oursponsors", "/aboutus", "/getintouch"
-    ]);
-    const normalizedPath = url.pathname.toLowerCase().replace(/\\/$/, "") || "/";
-    if (sectionPaths.has(normalizedPath)) {
-      const indexUrl = new URL("/index.html", url.origin);
-      return env.ASSETS.fetch(new Request(indexUrl, request));
-    }
+    // Let the configured Workers Assets SPA fallback serve section URLs.
     return env.ASSETS.fetch(request);
   }
 };
