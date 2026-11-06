@@ -301,3 +301,27 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   .flea-video-modal-content{width:auto;max-width:100%;padding:6px}
   .flea-video-player.flea-video-shorts{height:min(76vh,700px);width:auto;max-width:calc(100vw - 52px)}
 }
+
+
+/* Community feast menu and voluntary donation popup */
+.feast-menu-card{max-width:760px}
+.feast-menu-intro{margin-bottom:16px!important;color:#f0d9b1}
+.feast-menu-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px 14px;max-width:520px;margin:0 auto 24px;padding:0;list-style:none}
+.feast-menu-list li{padding:11px 14px;border:1px solid #e9b75d66;border-radius:11px;background:#ffffff09;color:#fff;font-weight:600}
+.feast-menu-list li:before{content:"✦";color:#ffd17a;margin-right:9px}
+.feast-donation-note{margin-top:12px;padding:20px;border:1px solid #e9b75d88;border-radius:16px;background:linear-gradient(145deg,rgba(9,29,57,.96),rgba(5,17,37,.98));text-align:center}
+.feast-donation-note>strong{color:#ffd17a;font:600 20px 'Playfair Display',Georgia,serif}
+.feast-donation-note p{color:#e5eaf1;font-size:13px;line-height:1.7}
+.feast-donation-trigger{cursor:pointer}
+.feast-donation-modal{position:fixed;inset:0;z-index:220;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(0,5,15,.88);backdrop-filter:blur(8px)}
+.feast-donation-modal-content{position:relative;width:min(100%,520px);padding:30px 24px 24px;border:1px solid #efbd62;border-radius:20px;background:linear-gradient(155deg,#0b2342,#061329);box-shadow:0 25px 90px #000c;text-align:center}
+.feast-donation-close{position:absolute;top:10px;right:10px;width:36px;height:36px;display:grid;place-items:center;border:1px solid #ffe6a0;border-radius:50%;background:#d99d3b;color:#2d1b06;cursor:pointer}
+.feast-donation-modal-icon{width:54px;height:54px;display:grid;place-items:center;margin:0 auto 12px;border-radius:50%;background:#efbd62;color:#442b08}
+.feast-donation-modal-content h3{margin:0 0 10px;color:#ffd17a;font:600 25px 'Playfair Display',Georgia,serif}
+.feast-donation-modal-content>p{color:#e5eaf1;font-size:13px;line-height:1.6}
+.feast-upi-option{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:13px;padding:15px;border:1px solid #e9b75d66;border-radius:13px;background:#ffffff08}
+.feast-upi-option span{color:#ffd17a;font-size:12px;font-weight:700}
+.feast-upi-option strong{color:#fff;font-size:13px;overflow-wrap:anywhere}
+.feast-upi-option button{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border:0;border-radius:9px;background:#efbd62;color:#332006;font-weight:800;cursor:pointer}
+.feast-donation-modal-content>small{display:block;margin-top:16px;color:#c7d1df;font-size:11px;line-height:1.5}
+@media(max-width:600px){.feast-menu-list{grid-template-columns:1fr;gap:7px}.feast-menu-list li{padding:10px 12px}.feast-donation-note{padding:16px}.feast-donation-modal-content{padding:28px 17px 20px}}
