@@ -64,9 +64,7 @@ function App() {
   const scrollToSection = (id, behavior = "smooth") => {
     const section = document.getElementById(id);
     if (!section) return;
-    const headerHeight = document.querySelector(".site-header")?.getBoundingClientRect().height || 0;
-    const top = window.scrollY + section.getBoundingClientRect().top - headerHeight - 12;
-    window.scrollTo({ top: Math.max(0, top), behavior });
+    section.scrollIntoView({ behavior, block: "start" });
   };
 
   const goTo = (id) => {
@@ -74,17 +72,17 @@ function App() {
     setMenuOpen(false);
     const path = SECTION_PATHS[id];
     if (path && window.location.pathname !== path) window.history.pushState({ section: id }, "", path);
-    requestAnimationFrame(() => scrollToSection(id, "smooth"));
+    requestAnimationFrame(() => requestAnimationFrame(() => scrollToSection(id, "smooth")));
   };
 
   useEffect(() => {
     const resolvePath = () => { const path = window.location.pathname.toLowerCase(); const normalizedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path; return PATH_SECTIONS[normalizedPath || "/"] || "home"; };
     const initialSection = resolvePath();
     if (initialSection !== "home") {
-      requestAnimationFrame(() => {
+      requestAnimationFrame(() => requestAnimationFrame(() => {
         scrollToSection(initialSection, "auto");
         setActive(initialSection);
-      });
+      }));
     }
     const handlePopState = () => {
       const id = resolvePath();
