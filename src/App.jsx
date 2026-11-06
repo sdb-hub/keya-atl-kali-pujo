@@ -277,6 +277,11 @@ function App() {
               <p>If you haven't had a chance to contribute, we warmly invite you to make any voluntary contribution. Every contribution, big or small, helps us celebrate together.</p>
               <button className="registration-link feast-donation-trigger" onClick={() => setFeastDonationOpen(true)}>Make a Voluntary Contribution</button>
             </div>
+            <div className="feast-query-contacts">
+              <strong>For any queries:</strong>
+              <p>Dipayan: <a href="tel:9686630031">9686630031</a></p>
+              <p>Soumalya: <a href="tel:9734523975">9734523975</a></p>
+            </div>
           </article>
           {feastDonationOpen && (
             <div className="feast-donation-modal" role="dialog" aria-modal="true" aria-label="Voluntary contribution details" onClick={() => setFeastDonationOpen(false)}>
