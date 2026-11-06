@@ -76,19 +76,19 @@ function App() {
   const scrollToSection = (id, behavior = "smooth") => {
     const section = document.getElementById(id);
     if (!section) return;
-    const header = document.querySelector(".site-header");
-    const headerHeight = header ? header.getBoundingClientRect().height : 0;
-    const targetTop = section.getBoundingClientRect().top + window.pageYOffset - headerHeight - 8;
-    window.scrollTo({ top: Math.max(0, targetTop), behavior });
+    section.scrollIntoView({ behavior, block: "start" });
   };
 
   const goTo = (id) => {
-    setActive(id);
+    const targetId = FEATURES.some((item) => item.id === id) || NAV.some((item) => item.id === id) ? id : "home";
+    setActive(targetId);
     setMenuOpen(false);
-    const path = SECTION_PATHS[id];
-    if (path && window.location.pathname !== path) window.history.pushState({ section: id }, "", path);
-    // Wait for the mobile menu to close and the header to return to its compact height.
-    window.setTimeout(() => scrollToSection(id, "auto"), 180);
+    const path = SECTION_PATHS[targetId];
+    if (path && window.location.pathname !== path) window.history.pushState({ section: targetId }, "", path);
+    // Scroll only after the mobile navigation has closed and the layout has settled.
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => scrollToSection(targetId, "auto"));
+    });
   };
 
   useEffect(() => {
