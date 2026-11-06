@@ -365,13 +365,31 @@ function App() {
           )}
         </section>
 
-<section id="sports" className="content-section section-anchor">
-          <SectionHeading kicker="PLAY · PARTICIPATE · CELEBRATE" title="Sports & Games" subtitle="Bring your energy and join the fun." />
-          <article className="info-card centered-card">
-            <Trophy className="large-card-icon" size={38} />
-            <h3>Sports Registration</h3>
-            <p>Register for the sports and games organised as part of our Kali Pujo celebrations.</p>
-            <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyPg50eRJmwx66oVuOzobVLYWygiiRKHANa2NRiHV6zDU1P6MCLjuvmZMg0X8vTGAE2Gg/exec" target="_blank" rel="noreferrer">Register for Sports <ExternalLink size={16} /></a>
+<section id="sports" className="content-section section-anchor sports-fiesta-section">
+          <SectionHeading kicker="PLAY · CONNECT · CELEBRATE" title="Sports Fiesta 2026" subtitle="Fixtures, team rosters, schedules and game rules for Keya ATL." />
+          <article className="info-card sports-fiesta-card">
+            <div className="sports-fiesta-toolbar">
+              <div>
+                <h3>Sports Fiesta Handbook</h3>
+                <p>Monday, 9 November 2026 · Futsal Court & Clubhouse</p>
+              </div>
+              <a className="registration-link sports-pdf-download" href="/Keya_ATL_Kali_Pujo_Sports_Fiesta_2026_FINAL.pdf" target="_blank" rel="noreferrer" download>
+                Download PDF <ExternalLink size={16} />
+              </a>
+            </div>
+            <iframe
+              className="sports-fiesta-pdf"
+              src="/Keya_ATL_Kali_Pujo_Sports_Fiesta_2026_FINAL.pdf#view=FitH"
+              title="Keya ATL Kali Pujo Sports Fiesta 2026 fixtures, teams, schedules and rules"
+            />
+            <div className="sports-fiesta-mobile-link">
+              <a href="/Keya_ATL_Kali_Pujo_Sports_Fiesta_2026_FINAL.pdf" target="_blank" rel="noreferrer">Open the Sports Fiesta PDF</a>
+            </div>
+            <div className="sports-query-contacts">
+              <strong>For any queries:</strong>
+              <p>Akash: <a href="tel:9003338723">9003338723</a></p>
+              <p>Rwitam: <a href="tel:9008866117">9008866117</a></p>
+            </div>
           </article>
         </section>
 
