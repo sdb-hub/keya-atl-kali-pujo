@@ -229,7 +229,7 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 
 
 /* Compact golden contribution button, separated from the main feature grid */
-.contribute-quick-wrap{display:flex;justify-content:flex-end;margin:14px 0 25px}
+.contribute-quick-wrap{display:flex;flex-direction:column;align-items:flex-end;justify-content:flex-start;margin:14px 0 25px}
 .feature-card.contribute-quick-card{grid-column:auto;width:auto;min-width:210px;min-height:58px;gap:10px;padding:9px 16px;border:1px solid #ffe5a1;border-radius:999px;background:linear-gradient(135deg,#ffe6a0 0%,#e7ad45 52%,#c98525 100%);color:#382307;box-shadow:0 7px 22px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.65)}
 .feature-card.contribute-quick-card:hover{transform:translateY(-2px);border-color:#fff2c8;background:linear-gradient(135deg,#fff0bd 0%,#efbd62 55%,#d79731 100%)}
 .feature-card.contribute-quick-card .feature-icon{width:32px;height:32px;flex-basis:32px;border-radius:50%;background:rgba(103,62,10,.12);color:#68420c}
@@ -329,18 +329,21 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 
 /* Transparent red feast menu announcement above the Contribute button */
 .feast-live-announcement{
+  display:block;
+  align-self:stretch;
   width:100%;
   margin:0 0 10px;
   padding:0;
   background:transparent;
   border:0;
-  color:#ff4b55;
+  color:#ff3b4b !important;
   font-size:clamp(14px,2vw,17px);
   font-weight:900;
   letter-spacing:.45px;
   line-height:1.4;
   text-align:center;
-  text-shadow:0 0 10px rgba(255,65,78,.28),0 1px 3px #0009;
+  white-space:nowrap;
+  text-shadow:0 0 12px rgba(255,45,65,.48),0 1px 3px #0009;
   cursor:pointer;
   animation:feastTextGlow 2s ease-in-out infinite;
 }
@@ -350,5 +353,6 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   50%{text-shadow:0 0 14px rgba(255,65,78,.5),0 1px 3px #0009}
 }
 @media(max-width:760px){
-  .feast-live-announcement{font-size:14px;margin-bottom:9px;letter-spacing:.25px}
+  .contribute-quick-wrap{align-items:flex-end}
+  .feast-live-announcement{font-size:14px;margin-bottom:11px;letter-spacing:.15px}
 }
