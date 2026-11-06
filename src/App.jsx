@@ -286,11 +286,11 @@ function App() {
                 <h3>Support Our Kali Pujo</h3>
                 <p>Your voluntary contribution will help us make the celebrations memorable for everyone. Thank you for your support!</p>
                 <div className="feast-upi-option">
-                  <span>Soumalya Das</span>
-                  <strong>Phone: 9734523975</strong>
-                  <button onClick={() => copyText("9734523975")}><Copy size={15} /> Copy Phone Number</button>
-                  <strong>dassoumalyadas-2@okhdfcbank</strong>
-                  <button onClick={() => copyText("dassoumalyadas-2@okhdfcbank")}><Copy size={15} /> Copy UPI ID</button>
+                  <span>Soumyadip Basu</span>
+                  <strong>Phone: 7686041496</strong>
+                  <button onClick={() => copyText("7686041496")}><Copy size={15} /> Copy Phone Number</button>
+                  <strong>7686041496@ybl</strong>
+                  <button onClick={() => copyText("7686041496@ybl")}><Copy size={15} /> Copy UPI ID</button>
                 </div>
                 <div className="feast-upi-option">
                   <span>Prateek Sadhukhan</span>
