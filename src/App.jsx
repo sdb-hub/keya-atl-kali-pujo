@@ -92,31 +92,47 @@ function App() {
   };
 
   useEffect(() => {
-    const resolvePath = () => { const path = window.location.pathname.toLowerCase(); const normalizedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path; return PATH_SECTIONS[normalizedPath || "/"] || "home"; };
+    const resolvePath = () => {
+      const path = window.location.pathname.toLowerCase().replace(/\\/$/, "") || "/";
+      return PATH_SECTIONS[path] || "home";
+    };
     const initialSection = resolvePath();
     if (initialSection !== "home") {
-      window.setTimeout(() => {
-        scrollToSection(initialSection, "auto");
-        setActive(initialSection);
-      }, 180);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          scrollToSection(initialSection, "auto");
+          setActive(initialSection);
+        });
+      });
     }
     const handlePopState = () => {
       const id = resolvePath();
       setActive(id);
-      window.setTimeout(() => scrollToSection(id, "auto"), 180);
+      requestAnimationFrame(() => scrollToSection(id, "auto"));
     };
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
   useEffect(() => {
-    const sections = NAV.map(({ id }) => document.getElementById(id)).filter(Boolean);
+    const sections = [...NAV, ...FEATURES.filter(({ event }) => event)].map(({ id }) => document.getElementById(id)).filter(Boolean);
+    let navigating = false;
+    const markNavigation = () => {
+      navigating = true;
+      window.setTimeout(() => { navigating = false; }, 650);
+    };
+    const onNavigation = () => markNavigation();
+    window.addEventListener("popstate", onNavigation);
     const observer = new IntersectionObserver((entries) => {
+      if (navigating) return;
       const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
       if (visible) setActive(visible.target.id);
     }, { rootMargin: "-25% 0px -60% 0px", threshold: [0, .2, .5] });
     sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("popstate", onNavigation);
+    };
   }, []);
 
   useEffect(() => {
