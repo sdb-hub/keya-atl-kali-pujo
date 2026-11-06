@@ -325,3 +325,25 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 .feast-upi-option button{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border:0;border-radius:9px;background:#efbd62;color:#332006;font-weight:800;cursor:pointer}
 .feast-donation-modal-content>small{display:block;margin-top:16px;color:#c7d1df;font-size:11px;line-height:1.5}
 @media(max-width:600px){.feast-menu-list{grid-template-columns:1fr;gap:7px}.feast-menu-list li{padding:10px 12px}.feast-donation-note{padding:16px}.feast-donation-modal-content{padding:28px 17px 20px}}
+
+
+/* Homepage announcement link for the live community feast menu */
+.feast-live-link{
+  display:block;
+  margin:0 0 10px auto;
+  padding:7px 13px;
+  border:1px solid #efbd62;
+  border-radius:999px;
+  background:rgba(217,45,58,.16);
+  color:#ffe3a1;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.2px;
+  cursor:pointer;
+  text-align:center;
+  transition:background .18s,transform .18s;
+}
+.feast-live-link:hover{background:rgba(217,45,58,.32);transform:translateY(-1px)}
+@media(max-width:760px){
+  .feast-live-link{font-size:11px;padding:7px 11px;margin-bottom:9px}
+}
