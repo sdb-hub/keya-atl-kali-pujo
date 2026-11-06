@@ -401,3 +401,24 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 @keyframes feastTimingShimmer{
   to{background-position:220% center}
 }
+
+
+/* Sports Fiesta handbook */
+.sports-fiesta-card{max-width:960px;margin:0 auto;padding:clamp(16px,3vw,26px)}
+.sports-fiesta-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.sports-fiesta-toolbar h3{margin:0 0 6px;color:#ffe0a2;font:600 22px 'Playfair Display',Georgia,serif}
+.sports-fiesta-toolbar p{margin:0;color:#d1dae7;font-size:13px}
+.sports-pdf-download{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.sports-fiesta-pdf{display:block;width:100%;height:min(82vh,1100px);min-height:620px;border:1px solid #e9b75d88;border-radius:12px;background:#fff}
+.sports-fiesta-mobile-link{display:none;margin:14px 0;text-align:center}
+.sports-fiesta-mobile-link a{color:#ffd17a;font-weight:700;text-decoration:underline}
+.sports-query-contacts{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin-top:20px;padding:16px;border-top:1px solid #e9b75d55;color:#f6d99e}
+.sports-query-contacts strong{width:100%;text-align:center}
+.sports-query-contacts p{margin:0;color:#e8edf6}
+.sports-query-contacts a{color:#ffd17a;text-decoration:none;font-weight:700}
+@media(max-width:640px){
+ .sports-fiesta-toolbar{align-items:flex-start;flex-direction:column}
+ .sports-fiesta-pdf{height:72vh;min-height:520px}
+ .sports-fiesta-mobile-link{display:block}
+ .sports-query-contacts{gap:10px 18px}
+}
