@@ -104,8 +104,23 @@ function App() {
     const initialSection = resolvePath();
     if (initialSection !== "home") {
       setActive(initialSection);
-      scrollToSection(initialSection, "auto");
-      requestAnimationFrame(() => scrollToSection(initialSection, "auto"));
+      // Wait for poster images above the target section to decode. On a direct
+      // mobile load, their late layout shifts can otherwise leave Tarangaa in view.
+      const waitForImages = Promise.all(
+        Array.from(document.images, (img) =>
+          img.decode ? img.decode().catch(() => undefined) :
+          img.complete ? Promise.resolve() :
+          new Promise((resolve) => {
+            img.addEventListener("load", resolve, { once: true });
+            img.addEventListener("error", resolve, { once: true });
+          })
+        )
+      );
+      waitForImages.then(() => {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => scrollToSection(initialSection, "auto"));
+        });
+      });
     }
     const handlePopState = () => {
       const id = resolvePath();
