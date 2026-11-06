@@ -93,7 +93,7 @@ function App() {
 
   useEffect(() => {
     const resolvePath = () => {
-      const path = window.location.pathname.toLowerCase().replace(/\\/$/, "") || "/";
+      const path = window.location.pathname.toLowerCase().replace(/\/$/, "") || "/";
       return PATH_SECTIONS[path] || "home";
     };
     const initialSection = resolvePath();
