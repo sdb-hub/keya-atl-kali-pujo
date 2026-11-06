@@ -70,7 +70,7 @@ function App() {
   };
 
   useEffect(() => {
-    const resolvePath = () => PATH_SECTIONS[window.location.pathname.replace(/\\/$/, "").toLowerCase() || "/"] || "home";
+    const resolvePath = () => { const path = window.location.pathname.toLowerCase(); const normalizedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path; return PATH_SECTIONS[normalizedPath || "/"] || "home"; };
     const initialSection = resolvePath();
     if (initialSection !== "home") {
       requestAnimationFrame(() => {
