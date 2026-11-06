@@ -222,7 +222,7 @@ function App() {
           <article className="info-card centered-card feast-menu-card">
             <Utensils className="large-card-icon" size={38} />
             <h3>Community Feast Menu</h3>
-            <p className="feast-menu-intro">A traditional vegetarian feast awaits!</p>
+            <p className="feast-menu-intro">A traditional vegetarian feast awaits! All food preparations are without onion and garlic.</p>
             <ul className="feast-menu-list">
               <li>Khichudi</li>
               <li>Alur Dum Dry</li>
@@ -246,11 +246,15 @@ function App() {
                 <p>Your voluntary contribution will help us make the celebrations memorable for everyone. Thank you for your support!</p>
                 <div className="feast-upi-option">
                   <span>Soumalya Das</span>
+                  <strong>Phone: 9734523975</strong>
+                  <button onClick={() => copyText("9734523975")}><Copy size={15} /> Copy Phone Number</button>
                   <strong>dassoumalyadas-2@okhdfcbank</strong>
                   <button onClick={() => copyText("dassoumalyadas-2@okhdfcbank")}><Copy size={15} /> Copy UPI ID</button>
                 </div>
                 <div className="feast-upi-option">
                   <span>Prateek Sadhukhan</span>
+                  <strong>Phone: 9477559166</strong>
+                  <button onClick={() => copyText("9477559166")}><Copy size={15} /> Copy Phone Number</button>
                   <strong>prateek.sadhukhan4-1@oksbi</strong>
                   <button onClick={() => copyText("prateek.sadhukhan4-1@oksbi")}><Copy size={15} /> Copy UPI ID</button>
                 </div>
