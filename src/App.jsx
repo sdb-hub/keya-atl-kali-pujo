@@ -31,6 +31,25 @@ const FEATURES = [
   { id: "contact", title: "Get in Touch", desc: "Get in touch with the organising team.", Icon: Mail, tone: "red" }
 ];
 
+const SECTION_PATHS = {
+  home: "/",
+  contribute: "/contribute",
+  schedule: "/schedule",
+  "keya-kalakriti": "/keyaKalakriti",
+  tarangaa: "/tarangaa",
+  "bongolorean-live": "/bongoloreanLive",
+  "community-feast": "/communityFeast",
+  sports: "/sports",
+  "flea-market": "/fleaMarket",
+  donations: "/donationDetails",
+  sponsors: "/ourSponsors",
+  about: "/aboutUs",
+  contact: "/getInTouch"
+};
+const PATH_SECTIONS = Object.fromEntries(
+  Object.entries(SECTION_PATHS).map(([id, path]) => [path.toLowerCase(), id])
+);
+
 function App() {
   const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,8 +64,28 @@ function App() {
   const goTo = (id) => {
     setActive(id);
     setMenuOpen(false);
+    const path = SECTION_PATHS[id];
+    if (path && window.location.pathname !== path) window.history.pushState({ section: id }, "", path);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  useEffect(() => {
+    const resolvePath = () => PATH_SECTIONS[window.location.pathname.replace(/\\/$/, "").toLowerCase() || "/"] || "home";
+    const initialSection = resolvePath();
+    if (initialSection !== "home") {
+      requestAnimationFrame(() => {
+        document.getElementById(initialSection)?.scrollIntoView({ behavior: "auto", block: "start" });
+        setActive(initialSection);
+      });
+    }
+    const handlePopState = () => {
+      const id = resolvePath();
+      setActive(id);
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   useEffect(() => {
     const sections = NAV.map(({ id }) => document.getElementById(id)).filter(Boolean);
