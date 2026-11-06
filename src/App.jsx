@@ -61,12 +61,20 @@ function App() {
   const [fleaVideoOpen, setFleaVideoOpen] = useState(false);
   const [feastDonationOpen, setFeastDonationOpen] = useState(false);
 
+  const scrollToSection = (id, behavior = "smooth") => {
+    const section = document.getElementById(id);
+    if (!section) return;
+    const headerHeight = document.querySelector(".site-header")?.getBoundingClientRect().height || 0;
+    const top = window.scrollY + section.getBoundingClientRect().top - headerHeight - 12;
+    window.scrollTo({ top: Math.max(0, top), behavior });
+  };
+
   const goTo = (id) => {
     setActive(id);
     setMenuOpen(false);
     const path = SECTION_PATHS[id];
     if (path && window.location.pathname !== path) window.history.pushState({ section: id }, "", path);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    requestAnimationFrame(() => scrollToSection(id, "smooth"));
   };
 
   useEffect(() => {
@@ -74,14 +82,14 @@ function App() {
     const initialSection = resolvePath();
     if (initialSection !== "home") {
       requestAnimationFrame(() => {
-        document.getElementById(initialSection)?.scrollIntoView({ behavior: "auto", block: "start" });
+        scrollToSection(initialSection, "auto");
         setActive(initialSection);
       });
     }
     const handlePopState = () => {
       const id = resolvePath();
       setActive(id);
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      scrollToSection(id, "smooth");
     };
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
