@@ -64,7 +64,10 @@ function App() {
   const scrollToSection = (id, behavior = "smooth") => {
     const section = document.getElementById(id);
     if (!section) return;
-    section.scrollIntoView({ behavior, block: "start" });
+    const header = document.querySelector(".site-header");
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const targetTop = section.getBoundingClientRect().top + window.pageYOffset - headerHeight - 8;
+    window.scrollTo({ top: Math.max(0, targetTop), behavior });
   };
 
   const goTo = (id) => {
@@ -72,22 +75,23 @@ function App() {
     setMenuOpen(false);
     const path = SECTION_PATHS[id];
     if (path && window.location.pathname !== path) window.history.pushState({ section: id }, "", path);
-    requestAnimationFrame(() => requestAnimationFrame(() => scrollToSection(id, "smooth")));
+    // Wait for the mobile menu to close and the header to return to its compact height.
+    window.setTimeout(() => scrollToSection(id, "auto"), 180);
   };
 
   useEffect(() => {
     const resolvePath = () => { const path = window.location.pathname.toLowerCase(); const normalizedPath = path.length > 1 && path.endsWith("/") ? path.slice(0, -1) : path; return PATH_SECTIONS[normalizedPath || "/"] || "home"; };
     const initialSection = resolvePath();
     if (initialSection !== "home") {
-      requestAnimationFrame(() => requestAnimationFrame(() => {
+      window.setTimeout(() => {
         scrollToSection(initialSection, "auto");
         setActive(initialSection);
-      }));
+      }, 180);
     }
     const handlePopState = () => {
       const id = resolvePath();
       setActive(id);
-      scrollToSection(id, "smooth");
+      window.setTimeout(() => scrollToSection(id, "auto"), 180);
     };
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
