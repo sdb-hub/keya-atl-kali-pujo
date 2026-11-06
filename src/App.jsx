@@ -109,7 +109,7 @@ function App() {
             <p className="hero-subtitle">A celebration of devotion, culture and community</p>
             <div className="ornament"><span />✦<span /></div>
             <div className="contribute-quick-wrap">
-              <button className="feast-live-link" onClick={() => goTo("community-feast")}>Feast Menu is LIVE now !!</button>
+              <p className="feast-live-announcement" onClick={() => goTo("community-feast")} role="link" tabIndex={0} onKeyDown={(event) => { if (event.key === "Enter" || event.key === " ") goTo("community-feast"); }}>✦ Feast Menu is LIVE now !! ✦</p>
               <button className="feature-card contribute-quick-card" onClick={() => goTo("contribute")}>
                 <span className="feature-icon"><HandHeart size={21} strokeWidth={1.9} /></span>
                 <span className="feature-copy"><strong>Contribute</strong><small>Support the celebrations</small></span>
