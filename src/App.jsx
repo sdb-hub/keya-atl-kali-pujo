@@ -273,12 +273,12 @@ function App() {
             <Utensils className="large-card-icon" size={38} />
             <h3>Community Feast Menu</h3>
             <p className="feast-menu-intro">A traditional vegetarian feast awaits! All food preparations are without onion and garlic.</p>
-            <p className="feast-menu-timing">Timing: 7:30 PM onwards</p>
+            <p className="feast-menu-timing"><strong>Timing: 7:30 PM onwards</strong></p>
             <ul className="feast-menu-list">
               <li>Khichudi</li>
               <li>Alur Dum</li>
               <li>Beguni</li>
-              <li>Chatni</li>
+              <li>Tomato Khejur Chatni</li>
               <li>Papad</li>
               <li>Payesh (Kheer)</li>
             </ul>
