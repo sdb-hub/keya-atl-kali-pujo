@@ -46,9 +46,21 @@ const SECTION_PATHS = {
   about: "/aboutUs",
   contact: "/getInTouch"
 };
-const PATH_SECTIONS = Object.fromEntries(
-  Object.entries(SECTION_PATHS).map(([id, path]) => [path.toLowerCase(), id])
-);
+const PATH_SECTIONS = {
+  "/": "home",
+  "/contribute": "contribute",
+  "/schedule": "schedule",
+  "/keyakalakriti": "keya-kalakriti",
+  "/tarangaa": "tarangaa",
+  "/bongoloreanlive": "bongolorean-live",
+  "/communityfeast": "community-feast",
+  "/sports": "sports",
+  "/fleamarket": "flea-market",
+  "/donationdetails": "donations",
+  "/oursponsors": "sponsors",
+  "/aboutus": "about",
+  "/getintouch": "contact"
+};
 
 function App() {
   const [active, setActive] = useState("home");
