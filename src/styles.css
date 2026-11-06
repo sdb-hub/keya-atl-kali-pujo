@@ -327,23 +327,45 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 @media(max-width:600px){.feast-menu-list{grid-template-columns:1fr;gap:7px}.feast-menu-list li{padding:10px 12px}.feast-donation-note{padding:16px}.feast-donation-modal-content{padding:28px 17px 20px}}
 
 
-/* Homepage announcement link for the live community feast menu */
+/* High-visibility homepage announcement for the live community feast menu */
 .feast-live-link{
-  display:block;
-  margin:0 0 10px auto;
-  padding:7px 13px;
-  border:1px solid #efbd62;
-  border-radius:999px;
-  background:rgba(217,45,58,.16);
-  color:#ffe3a1;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.2px;
-  cursor:pointer;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:11px;
+  width:min(100%,520px);
+  margin:0 auto 16px;
+  padding:15px 22px;
+  border:2px solid #ffe6a0;
+  border-radius:14px;
+  background:linear-gradient(105deg,#a9162b 0%,#e43a3f 48%,#a9162b 100%);
+  color:#fff8e8;
+  font-size:clamp(14px,2vw,17px);
+  font-weight:900;
+  letter-spacing:.45px;
   text-align:center;
-  transition:background .18s,transform .18s;
+  text-shadow:0 2px 5px #5b0715a8;
+  cursor:pointer;
+  box-shadow:0 0 0 3px #efbd6233,0 9px 25px #0007,inset 0 1px 0 #ffffff55;
+  animation:feastAnnouncementPulse 2s ease-in-out infinite;
+  transition:transform .18s,box-shadow .18s;
 }
-.feast-live-link:hover{background:rgba(217,45,58,.32);transform:translateY(-1px)}
+.feast-live-link:before,.feast-live-link:after{
+  content:"✦";
+  color:#ffe6a0;
+  font-size:18px;
+  flex:0 0 auto;
+}
+.feast-live-link:hover{
+  transform:translateY(-3px) scale(1.015);
+  box-shadow:0 0 0 4px #efbd6266,0 13px 30px #0008,inset 0 1px 0 #ffffff66;
+}
+@keyframes feastAnnouncementPulse{
+  0%,100%{box-shadow:0 0 0 3px #efbd6233,0 9px 25px #0007,inset 0 1px 0 #ffffff55}
+  50%{box-shadow:0 0 0 6px #efbd6255,0 11px 30px #0008,inset 0 1px 0 #ffffff66}
+}
 @media(max-width:760px){
-  .feast-live-link{font-size:11px;padding:7px 11px;margin-bottom:9px}
+  .feast-live-link{width:100%;gap:8px;margin-bottom:14px;padding:13px 10px;border-radius:12px;font-size:13px;letter-spacing:.2px}
+  .feast-live-link:before,.feast-live-link:after{font-size:15px}
 }
