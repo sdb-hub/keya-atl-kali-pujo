@@ -362,16 +362,15 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 /* Keep feast query contacts on one clean golden line */
 .feast-query-contacts{
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
-  flex-wrap:nowrap;
-  gap:10px;
+  gap:5px;
   margin-top:18px;
   color:#ffd17a;
   font-size:12px;
   line-height:1.5;
-  white-space:nowrap;
-  overflow-x:auto;
+  text-align:center;
 }
 .feast-query-contacts>strong,
 .feast-query-contacts p,
@@ -379,8 +378,9 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   color:#ffd17a !important;
 }
 .feast-query-contacts p{display:inline;margin:0}
+.feast-query-contacts p + p{margin-left:8px}
 .feast-query-contacts a{text-decoration:none;font-weight:700}
 .feast-query-contacts a:hover{text-decoration:underline}
 @media(max-width:600px){
-  .feast-query-contacts{gap:7px;font-size:10px;margin-top:15px}
+  .feast-query-contacts{gap:5px;font-size:11px;margin-top:15px}
 }
