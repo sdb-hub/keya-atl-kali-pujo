@@ -263,17 +263,18 @@ function App() {
             <Utensils className="large-card-icon" size={38} />
             <h3>Community Feast Menu</h3>
             <p className="feast-menu-intro">A traditional vegetarian feast awaits! All food preparations are without onion and garlic.</p>
+            <p className="feast-menu-timing">Timing: 7:30 PM onwards</p>
             <ul className="feast-menu-list">
               <li>Khichudi</li>
-              <li>Alur Dum Dry</li>
+              <li>Alur Dum</li>
               <li>Beguni</li>
               <li>Chatni</li>
               <li>Papad</li>
-              <li>Payesh</li>
+              <li>Payesh (Kheer)</li>
             </ul>
             <div className="feast-donation-note">
               <strong>A small request to our community</strong>
-              <p>Some households have registered for the feast at no cost but have not yet contributed towards the celebrations. If you haven't had a chance to donate, we warmly invite you to make any voluntary contribution. Every contribution, big or small, helps us celebrate together.</p>
+              <p>If you haven't had a chance to contribute, we warmly invite you to make any voluntary contribution. Every contribution, big or small, helps us celebrate together.</p>
               <button className="registration-link feast-donation-trigger" onClick={() => setFeastDonationOpen(true)}>Make a Voluntary Contribution</button>
             </div>
           </article>
