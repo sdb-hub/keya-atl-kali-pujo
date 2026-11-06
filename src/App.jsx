@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import {
   Menu, X, HandHeart, ReceiptText, CalendarDays, Trophy, Users, Utensils, Mail, ShoppingBag,
   ChevronRight, Copy, ExternalLink, ArrowUp, Flame, Heart, Pause, Play, Search, Music2, Drama, Guitar
@@ -91,19 +91,21 @@ function App() {
     });
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Prevent mobile Safari from restoring the previous page's scroll position
+    // after a direct section URL has been loaded.
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
     const resolvePath = () => {
       const path = window.location.pathname.toLowerCase().replace(/\/$/, "") || "/";
       return PATH_SECTIONS[path] || "home";
     };
     const initialSection = resolvePath();
     if (initialSection !== "home") {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          scrollToSection(initialSection, "auto");
-          setActive(initialSection);
-        });
-      });
+      setActive(initialSection);
+      scrollToSection(initialSection, "auto");
+      requestAnimationFrame(() => scrollToSection(initialSection, "auto"));
     }
     const handlePopState = () => {
       const id = resolvePath();
