@@ -384,3 +384,20 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 @media(max-width:600px){
   .feast-query-contacts{gap:5px;font-size:11px;margin-top:15px}
 }
+
+
+/* Shimmering gold highlight for Community Feast timing */
+.feast-menu-timing strong{
+  display:inline-block;
+  color:#ffd36f;
+  background:linear-gradient(110deg,#b87920 0%,#ffe7a3 22%,#d99a32 42%,#fff4c4 55%,#c88724 75%,#ffe6a0 100%);
+  background-size:220% auto;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 0 14px rgba(255,195,83,.22);
+  animation:feastTimingShimmer 3s linear infinite;
+}
+@keyframes feastTimingShimmer{
+  to{background-position:220% center}
+}
