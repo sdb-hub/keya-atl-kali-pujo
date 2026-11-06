@@ -327,7 +327,7 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
 @media(max-width:600px){.feast-menu-list{grid-template-columns:1fr;gap:7px}.feast-menu-list li{padding:10px 12px}.feast-donation-note{padding:16px}.feast-donation-modal-content{padding:28px 17px 20px}}
 
 
-/* High-visibility homepage announcement for the live community feast menu */
+/* High-visibility homepage announcement matching the golden Contribute button */
 .feast-live-link{
   position:relative;
   display:flex;
@@ -337,35 +337,37 @@ button{font:inherit}.site-header{position:sticky;top:0;z-index:50;min-height:72p
   width:min(100%,520px);
   margin:0 auto 16px;
   padding:15px 22px;
-  border:2px solid #ffe6a0;
-  border-radius:14px;
-  background:linear-gradient(105deg,#a9162b 0%,#e43a3f 48%,#a9162b 100%);
-  color:#fff8e8;
+  border:2px solid #ffe5a1;
+  border-radius:999px;
+  background:linear-gradient(135deg,#ffe6a0 0%,#e7ad45 52%,#c98525 100%);
+  color:#382307;
   font-size:clamp(14px,2vw,17px);
   font-weight:900;
-  letter-spacing:.45px;
+  letter-spacing:.35px;
   text-align:center;
-  text-shadow:0 2px 5px #5b0715a8;
+  text-shadow:0 1px 0 #ffffff66;
   cursor:pointer;
-  box-shadow:0 0 0 3px #efbd6233,0 9px 25px #0007,inset 0 1px 0 #ffffff55;
+  box-shadow:0 7px 22px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.65),0 0 0 3px #efbd6233;
   animation:feastAnnouncementPulse 2s ease-in-out infinite;
-  transition:transform .18s,box-shadow .18s;
+  transition:transform .18s,box-shadow .18s,background .18s;
 }
 .feast-live-link:before,.feast-live-link:after{
   content:"✦";
-  color:#ffe6a0;
+  color:#68420c;
   font-size:18px;
   flex:0 0 auto;
 }
 .feast-live-link:hover{
   transform:translateY(-3px) scale(1.015);
-  box-shadow:0 0 0 4px #efbd6266,0 13px 30px #0008,inset 0 1px 0 #ffffff66;
+  border-color:#fff2c8;
+  background:linear-gradient(135deg,#fff0bd 0%,#efbd62 55%,#d79731 100%);
+  box-shadow:0 10px 28px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.7),0 0 0 4px #efbd6266;
 }
 @keyframes feastAnnouncementPulse{
-  0%,100%{box-shadow:0 0 0 3px #efbd6233,0 9px 25px #0007,inset 0 1px 0 #ffffff55}
-  50%{box-shadow:0 0 0 6px #efbd6255,0 11px 30px #0008,inset 0 1px 0 #ffffff66}
+  0%,100%{box-shadow:0 7px 22px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.65),0 0 0 3px #efbd6233}
+  50%{box-shadow:0 9px 27px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.7),0 0 0 6px #efbd6255}
 }
 @media(max-width:760px){
-  .feast-live-link{width:100%;gap:8px;margin-bottom:14px;padding:13px 10px;border-radius:12px;font-size:13px;letter-spacing:.2px}
+  .feast-live-link{width:100%;gap:8px;margin-bottom:14px;padding:13px 10px;border-radius:999px;font-size:13px;letter-spacing:.2px}
   .feast-live-link:before,.feast-live-link:after{font-size:15px}
 }
