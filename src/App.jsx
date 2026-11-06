@@ -373,18 +373,18 @@ function App() {
                 <h3>Sports Fiesta Handbook</h3>
                 <p>Monday, 9 November 2026 · Futsal Court & Clubhouse</p>
               </div>
-              <a className="registration-link sports-pdf-download" href="/Keya_ATL_Kali_Pujo_Sports_Fiesta_2026_FINAL.pdf" target="_blank" rel="noreferrer" download>
-                Download PDF <ExternalLink size={16} />
-              </a>
             </div>
-            <iframe
-              className="sports-fiesta-pdf"
-              src="/Keya_ATL_Kali_Pujo_Sports_Fiesta_2026_FINAL.pdf#view=FitH"
-              title="Keya ATL Kali Pujo Sports Fiesta 2026 fixtures, teams, schedules and rules"
-            />
-            <div className="sports-fiesta-mobile-link">
-              <a href="/Keya_ATL_Kali_Pujo_Sports_Fiesta_2026_FINAL.pdf" target="_blank" rel="noreferrer">Open the Sports Fiesta PDF</a>
-            </div>
+            <p className="sports-fiesta-intro">The complete Sports Fiesta 2026 handbook is available to download. It includes:</p>
+            <ul className="sports-fiesta-contents">
+              <li>Festival day plan, timings and venues</li>
+              <li>Team rosters and match fixtures for 7 Stones Lagori and Ultimate Frisbee</li>
+              <li>Kids' and adults' Speed Chess schedules and pairings</li>
+              <li>Under-10 fun games and activity schedule</li>
+              <li>Official rules posters and game guidelines</li>
+            </ul>
+            <a className="registration-link sports-pdf-download" href="/Keya_ATL_Kali_Pujo_Sports_Fiesta_2026_FINAL.pdf" target="_blank" rel="noreferrer" download>
+              Download Sports Fiesta PDF <ExternalLink size={16} />
+            </a>
             <div className="sports-query-contacts">
               <strong>For any queries:</strong>
               <p>Akash: <a href="tel:9003338723">9003338723</a></p>
