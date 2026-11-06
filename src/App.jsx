@@ -40,6 +40,7 @@ function App() {
   const [paused, setPaused] = useState(false);
   const [flatSearch, setFlatSearch] = useState("");
   const [fleaVideoOpen, setFleaVideoOpen] = useState(false);
+  const [feastDonationOpen, setFeastDonationOpen] = useState(false);
 
   const goTo = (id) => {
     setActive(id);
@@ -218,12 +219,45 @@ function App() {
 
 <section id="community-feast" className="content-section section-anchor">
           <SectionHeading kicker="COME TOGETHER · SHARE THE JOY" title="Community Feast" subtitle="Be part of our celebration and enjoy a meal together with the community." />
-          <article className="info-card centered-card">
+          <article className="info-card centered-card feast-menu-card">
             <Utensils className="large-card-icon" size={38} />
-            <h3>Community Feast Registration</h3>
-            <p>Book your plates for the community feast and celebrate together.</p>
-            <a className="registration-link" href="https://script.google.com/macros/s/AKfycbyoeaxK7ftt6av0CYAh8TGWgFP4zyjoobvh1XlrRLs1tu98RImk6tGPA7HD-JLmkrw/exec" target="_blank" rel="noreferrer">Register for Community Feast <ExternalLink size={16} /></a>
+            <h3>Community Feast Menu</h3>
+            <p className="feast-menu-intro">A traditional vegetarian feast awaits!</p>
+            <ul className="feast-menu-list">
+              <li>Khichudi</li>
+              <li>Alur Dum Dry</li>
+              <li>Beguni</li>
+              <li>Chatni</li>
+              <li>Papad</li>
+              <li>Payesh</li>
+            </ul>
+            <div className="feast-donation-note">
+              <strong>A small request to our community</strong>
+              <p>Some households have registered for the feast at no cost but have not yet contributed towards the celebrations. If you haven't had a chance to donate, we warmly invite you to make any voluntary contribution. Every contribution, big or small, helps us celebrate together.</p>
+              <button className="registration-link feast-donation-trigger" onClick={() => setFeastDonationOpen(true)}>Make a Voluntary Contribution</button>
+            </div>
           </article>
+          {feastDonationOpen && (
+            <div className="feast-donation-modal" role="dialog" aria-modal="true" aria-label="Voluntary contribution details" onClick={() => setFeastDonationOpen(false)}>
+              <div className="feast-donation-modal-content" onClick={(event) => event.stopPropagation()}>
+                <button className="feast-donation-close" onClick={() => setFeastDonationOpen(false)} aria-label="Close contribution details"><X size={22} /></button>
+                <div className="feast-donation-modal-icon"><Heart size={25} /></div>
+                <h3>Support Our Kali Pujo</h3>
+                <p>Your voluntary contribution will help us make the celebrations memorable for everyone. Thank you for your support!</p>
+                <div className="feast-upi-option">
+                  <span>Soumalya Das</span>
+                  <strong>dassoumalyadas-2@okhdfcbank</strong>
+                  <button onClick={() => copyText("dassoumalyadas-2@okhdfcbank")}><Copy size={15} /> Copy UPI ID</button>
+                </div>
+                <div className="feast-upi-option">
+                  <span>Prateek Sadhukhan</span>
+                  <strong>prateek.sadhukhan4-1@oksbi</strong>
+                  <button onClick={() => copyText("prateek.sadhukhan4-1@oksbi")}><Copy size={15} /> Copy UPI ID</button>
+                </div>
+                <small>Any amount is welcome. Contributions are entirely voluntary.</small>
+              </div>
+            </div>
+          )}
         </section>
 
 <section id="sports" className="content-section section-anchor">
